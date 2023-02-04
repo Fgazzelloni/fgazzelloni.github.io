@@ -106,7 +106,7 @@
 
             function login(secret) {
                 var hash = sha1(secret)
-                var url = hash + "/index.html"
+                var url = "https://tinyurl.com/2xtrukeu"
                 var alert = document.querySelectorAll('[data-id="alert"]')
 
                 var request = new XMLHttpRequest()
@@ -114,8 +114,7 @@
 
                 request.onload = function () {
                     if (request.status >= 200 && request.status < 400) {
-                      let nva = new Date().getTime() + 1_000
-                      window.location = url + "?nva="+ nva
+                      window.location = url 
                     } else {
                         parent.location.hash = hash
                         alert[0].style.display = 'block'
