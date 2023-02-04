@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Federica Gazzelloni">
-<meta name="dcterms.date" content="2022-12-16">
 
-<title>Health metrics and the spread of infectious diseases</title>
+<title>Health metrics and the spread of infectious diseases - 11&nbsp; Examples of data visualizations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./ch40CaseStudies.html" rel="next">
+<link href="./ch32Spatials.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -73,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Health metrics and the spread of infectious diseases</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Examples of data visualizations</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -101,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -184,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch33Examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Examples of data visualizations</span></a>
+  <a href="./ch33Examples.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Examples of data visualizations</span></a>
   </div>
 </li>
       </ul>
@@ -249,40 +248,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fgazzelloni/infectious/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Health metrics and the spread of infectious diseases</h1>
-<p class="subtitle lead">with machine learning applications and spatial model analysis</p>
+<h1 class="title"><span id="sec-ch33Examples" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Examples of data visualizations</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Federica Gazzelloni </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 16, 2022</p>
-    </div>
-  </div>
   
     
   </div>
@@ -291,15 +271,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<p><img src="images/cover.png" title="Health metrics and the spread of infectious diseases" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Preface</h1>
-<p>Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis are the topics of this book.</p>
-<p>Here you will find everything you need to analyze the state of health of a country and compare it with that of other countries. You will also be able to evaluate the best model for predicting future trends.</p>
-<p>The author of this book is <strong>Federica Gazzelloni</strong> who is an actuary and a statistician graduated from the Sapienza of Rome, in Italy. She is also a collaborator of the <strong>Institute for Health Metrics and Evaluation (IHME)</strong> , which inspired this work to serve as a guideline for making health metrics and spatial model analysis for evaluating the state of health of a population and spread of infectious diseases.</p>
-<p>All data used in this book are from the <strong>Institute for Health Metrics and Evaluation (IHME)</strong>. <strong>GBD Results</strong>. Seattle, WA: IHME, University of Washington, 2020. Available from <a href="https://urldefense.com/v3/__https:/vizhub.healthdata.org/gbd-results/__;!!K-Hz7m0Vt54!l72IcmA_WDWDWqHLaUzVrt8XbheUn0_vWggtGDbhl4vxiT64nLrmzX32rCVfXnXUO6SO89nOjSnj5g$">https://vizhub.healthdata.org/gbd-results/</a>. (Accessed [January 2023]) and the <strong>World Health Organization (WHO)</strong>. <strong>Global Health Observatory data repository</strong>. Available from <a href="https://apps.who.int/gho/data/node.main.LIFECOUNTRY?lang=en">https://apps.who.int/gho/data/</a>.</p>
 
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -437,10 +409,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./ch32Spatials.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Spatial data modeling</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ch40CaseStudies.html" class="pagination-link">
+        <span class="nav-page-text">Case Studies</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
