@@ -365,122 +365,35 @@ div.csl-indent {
 <p>Both of these elements are key for achieving the highest value of prediction of the state of health of a population.</p>
 <section id="life-tables" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="life-tables">
 <span class="header-section-number">3.1.1</span> Life tables</h3>
-<p>The life tables are selected among the most frequently used, more information about how to build a like table can be found in the <span class="quarto-unresolved-ref">?sec-appendix_a</span> of this book.</p>
+<p>The life tables are selected among the most frequently used, more information about how to build a like table can be found in the <a href="#sec-appendix_a"><span class="quarto-unresolved-ref">sec-appendix_a</span></a> of this book.</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="va">xmart</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data-raw/xmart.csv"</span>,skip <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">xmart</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="va">head</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 17
-  Indicator      Age G…¹ Both …² Male.…³ Femal…⁴ Both …⁵ Male.…⁶ Femal…⁷ Both …⁸
-  &lt;chr&gt;          &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-1 nMx - age-spe… &amp;lt;1 … 4.78e-2 5.13e-2 4.41e-2 5.66e-2 6.02e-2 5.27e-2 6.75e-2
-2 nMx - age-spe… 1-4 ye… 3.61e-3 3.67e-3 3.55e-3 4.63e-3 4.67e-3 4.58e-3 6.43e-3
-3 nMx - age-spe… 5-9 ye… 4.61e-4 4.69e-4 4.53e-4 6.68e-4 6.75e-4 6.62e-4 1.15e-3
-4 nMx - age-spe… 10-14 … 3.70e-4 3.87e-4 3.52e-4 4.98e-4 5.16e-4 4.79e-4 8.27e-4
-5 nMx - age-spe… 15-19 … 1.32e-3 1.46e-3 1.18e-3 2.22e-3 2.74e-3 1.67e-3 1.88e-3
-6 nMx - age-spe… 20-24 … 2.01e-3 2.22e-3 1.79e-3 3.41e-3 4.47e-3 2.27e-3 2.87e-3
-# … with 8 more variables: Male...10 &lt;dbl&gt;, Female...11 &lt;dbl&gt;,
-#   `Both sexes...12` &lt;dbl&gt;, Male...13 &lt;dbl&gt;, Female...14 &lt;dbl&gt;,
-#   `Both sexes...15` &lt;dbl&gt;, Male...16 &lt;dbl&gt;, Female...17 &lt;dbl&gt;, and
-#   abbreviated variable names ¹​`Age Group`, ²​`Both sexes...3`, ³​Male...4,
-#   ⁴​Female...5, ⁵​`Both sexes...6`, ⁶​Male...7, ⁷​Female...8, ⁸​`Both sexes...9`</code></pre>
+<details><summary>Show the code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fgazzelloni/infectious">infectious</a></span><span class="op">)</span></span>
+<span><span class="fu">infectious</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/infectious/man/Glifetables.html">Glifetables</a></span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="va">head</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  indicator                                           age_g…¹ sex    value year 
+  &lt;chr&gt;                                               &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;
+1 nMx - age-specific death rate between ages x and x… 1 year  both  0.0478 2019 
+2 nMx - age-specific death rate between ages x and x… 1 year  male  0.0513 2019 
+3 nMx - age-specific death rate between ages x and x… 1 year  fema… 0.0441 2019 
+4 nMx - age-specific death rate between ages x and x… 1 year  both  0.0566 2015 
+5 nMx - age-specific death rate between ages x and x… 1 year  male  0.0602 2015 
+6 nMx - age-specific death rate between ages x and x… 1 year  fema… 0.0528 2015 
+# … with abbreviated variable name ¹​age_group</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_yrs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data-raw/xmart.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>New names:
-Rows: 134 Columns: 17
-── Column specification
-──────────────────────────────────────────────────────── Delimiter: "," chr
-(17): ...1, ...2, 2019...3, 2019...4, 2019...5, 2015...6, 2015...7, 2015...
-ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-Specify the column types or set `show_col_types = FALSE` to quiet this message.
-• `` -&gt; `...1`
-• `` -&gt; `...2`
-• `2019` -&gt; `2019...3`
-• `2019` -&gt; `2019...4`
-• `2019` -&gt; `2019...5`
-• `2015` -&gt; `2015...6`
-• `2015` -&gt; `2015...7`
-• `2015` -&gt; `2015...8`
-• `2010` -&gt; `2010...9`
-• `2010` -&gt; `2010...10`
-• `2010` -&gt; `2010...11`
-• `2005` -&gt; `2005...12`
-• `2005` -&gt; `2005...13`
-• `2005` -&gt; `2005...14`
-• `2000` -&gt; `2000...15`
-• `2000` -&gt; `2000...16`
-• `2000` -&gt; `2000...17`</code></pre>
-</div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_yrs</span> <span class="op">&lt;-</span> <span class="va">xmart_yrs</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span>,<span class="op">]</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/janitor/man/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols<span class="op">=</span><span class="fl">3</span><span class="op">:</span><span class="fl">17</span>,names_to<span class="op">=</span><span class="st">"years"</span>,values_to<span class="op">=</span><span class="st">"values"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>values<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">values</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">xmart_yrs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="va">names</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "x1"     "x2"     "years"  "values"</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_yrs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1,995 × 4
-   x1                                                   x2         years  values
-   &lt;chr&gt;                                                &lt;chr&gt;      &lt;chr&gt;   &lt;dbl&gt;
- 1 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2019… 0.0478
- 2 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2019… 0.0513
- 3 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2019… 0.0441
- 4 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2015… 0.0566
- 5 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2015… 0.0602
- 6 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2015… 0.0527
- 7 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2010… 0.0675
- 8 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2010… 0.0723
- 9 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2010… 0.0625
-10 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2005… 0.0822
-# … with 1,985 more rows</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_tidy</span> <span class="op">&lt;-</span> <span class="va">xmart</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/janitor/man/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="fl">3</span><span class="op">:</span><span class="fl">17</span>,names_to<span class="op">=</span><span class="st">"sex"</span>,values_to<span class="op">=</span><span class="st">"values"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">xmart_yrs</span>,by<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"indicator"</span><span class="op">=</span><span class="st">"x1"</span>,<span class="st">"age_group"</span><span class="op">=</span><span class="st">"x2"</span>,<span class="st">"values"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>age_group<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">sub</a></span><span class="op">(</span><span class="st">"&amp;lt;"</span>,<span class="st">""</span>,<span class="va">age_group</span><span class="op">)</span>,</span>
-<span>         sex<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">"_\\d+"</span>,<span class="st">""</span>,<span class="va">sex</span><span class="op">)</span>,</span>
-<span>         sex<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"both_sexes"</span>,<span class="st">"both"</span>,<span class="va">sex</span><span class="op">)</span>,</span>
-<span>         years<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">sub</a></span><span class="op">(</span><span class="st">"x"</span>,<span class="st">""</span>,<span class="va">years</span><span class="op">)</span>,</span>
-<span>         years<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">"_\\d+"</span>,<span class="st">""</span>,<span class="va">years</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span><span class="va">xmart_tidy</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">indicator</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 7 × 2
-  indicator                                                n
-  &lt;chr&gt;                                                &lt;int&gt;
-1 ex - expectation of life at age x                      285
-2 lx - number of people left alive at age x              495
-3 ndx - number of people dying between ages x and x+n    285
-4 nLx - person-years lived between ages x and x+n        285
-5 nMx - age-specific death rate between ages x and x+n   285
-6 nqx - probability of dying between ages x and x+n      495
-7 Tx - person-years lived above age x                    285</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_tidy</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<details><summary>Show the code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Glifetables</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"both"</span>,</span>
 <span>         <span class="va">indicator</span><span class="op">==</span><span class="st">"ex - expectation of life at age x"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>         <span class="co">#age_group=="1 year")%&gt;%</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">years</span>,<span class="va">values</span>,group<span class="op">=</span><span class="va">indicator</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">year</span>,<span class="va">value</span>,group<span class="op">=</span><span class="va">indicator</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">age_group</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="ch12Components_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">age_group</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<p><img src="ch12Components_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="life-expectancy" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="life-expectancy">
@@ -491,8 +404,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <p>In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on these key elements.</p>
 <section id="ylls" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="ylls">
 <span class="header-section-number">3.2.1</span> YLLs</h3>
-<p>The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death.</p>
-<p><span class="citation" data-cites="reiner2022">Reiner and Hay (<a href="#ref-reiner2022" role="doc-biblioref">2022</a>)</span></p>
+<p>The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death <span class="citation" data-cites="reiner2022">(see <a href="#ref-reiner2022" role="doc-biblioref">Reiner and Hay 2022</a>)</span></p>
 </section><section id="ylds" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="ylds">
 <span class="header-section-number">3.2.2</span> YLDs</h3>
 </section><section id="dalys" class="level3" data-number="3.2.3"><h3 data-number="3.2.3" class="anchored" data-anchor-id="dalys">
@@ -657,4 +569,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </footer>
 
 
-</body></html>
+
+    <script>
+      let paramString = window.location.search.split('?')[1];
+      let queryString = new URLSearchParams(paramString);
+      let nva = parseInt(queryString.get('nva'))
+      let now = new Date().getTime()
+      if (Number.isNaN(nva) || now > nva) {
+          console.log('not-valid-after invalid, going to redirect to /')
+          window.location = '/'
+      }
+    </script>
+    </body></html>

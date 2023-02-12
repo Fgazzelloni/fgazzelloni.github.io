@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<script>
-let paramString = window.location.search.split('?')[1];
-let queryString = new URLSearchParams(paramString);
-let nva = parseInt(queryString.get("nva"))
-let now = new Date().getTime()
-if (Number.isNaN(nva) || now > nva) {
-    console.log("not-valid-after invalid, going to redirect to /")
-    window.location = "/"
-}
-</script>
-
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.313">
 
@@ -465,4 +454,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+    <script>
+      let paramString = window.location.search.split('?')[1];
+      let queryString = new URLSearchParams(paramString);
+      let nva = parseInt(queryString.get('nva'))
+      let now = new Date().getTime()
+      if (Number.isNaN(nva) || now > nva) {
+          console.log('not-valid-after invalid, going to redirect to /')
+          window.location = '/'
+      }
+    </script>
+    </body></html>
