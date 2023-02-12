@@ -114,8 +114,8 @@
 
                 request.onload = function () {
                     if (request.status >= 200 && request.status < 400) {
-                      let nva = new Date().getTime() + 1_000
-                      window.location = url + "?nva="+nva
+                      let nva = new Date().getTime() + 5_000
+                      window.location = url + "?nva="+ nva
                     } else {
                         parent.location.hash = hash
                         alert[0].style.display = 'block'
