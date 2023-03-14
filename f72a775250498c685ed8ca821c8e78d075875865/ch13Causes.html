@@ -317,34 +317,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Overview of the causes and risks</p></li>
 </ul>
 <p>Conditions and injuries that are associated with the burden of disease and injury vary according to their specific causes and risks. However, some common causes and risk factors include:</p>
-<ol type="1">
-<li><p>Lifestyle choices: Poor diet, physical inactivity, tobacco use, and excessive alcohol consumption are major risk factors for many chronic diseases and injuries, including heart disease, stroke, cancer, and liver disease.</p></li>
-<li><p>Environmental factors: Exposure to pollutants, such as air pollution and toxic chemicals, can increase the risk of certain diseases and injuries.</p></li>
-<li><p>Infections: Many diseases, such as tuberculosis, HIV/AIDS, and malaria, are caused by infectious agents.</p></li>
-<li><p>Poverty: People living in poverty are often more susceptible to health problems due to limited access to healthcare, healthy food, and safe living conditions.</p></li>
-<li><p>Aging: As people get older, they are at an increased risk of many health problems, including chronic diseases and disabilities.</p></li>
-<li><p>Genetics: Some diseases and injuries are caused by genetic factors, such as a genetic predisposition to certain cancers.</p></li>
-<li><p>Injuries: Injuries, such as falls, road traffic accidents, and violence, can also contribute to the burden of diseases and injuries.</p></li>
-</ol>
+<ul>
+<li><p><strong>Lifestyle choices</strong>: Poor diet, physical inactivity, tobacco use, and excessive alcohol consumption are major risk factors for many chronic diseases and injuries, including heart disease, stroke, cancer, and liver disease.</p></li>
+<li><p><strong>Environmental factors</strong>: Exposure to pollutants, such as air pollution and toxic chemicals, can increase the risk of certain diseases and injuries.</p></li>
+<li><p><strong>Infections</strong>: Many diseases, such as tuberculosis, HIV/AIDS, and malaria, are caused by infectious agents.</p></li>
+<li><p><strong>Poverty</strong>: People living in poverty are often more susceptible to health problems due to limited access to healthcare, healthy food, and safe living conditions.</p></li>
+<li><p><strong>Aging</strong>: As people get older, they are at an increased risk of many health problems, including chronic diseases and disabilities.</p></li>
+<li><p><strong>Genetics</strong>: Some diseases and injuries are caused by genetic factors, such as a genetic predisposition to certain cancers.</p></li>
+<li><p><strong>Injuries</strong>: Injuries, such as falls, road traffic accidents, and violence, can also contribute to the burden of diseases and injuries.</p></li>
+</ul>
+<p><br></p>
 <p>A particular health condition can have multiple causes and risk factors. For example, poverty and lack of access to healthcare can increase the risk of infectious diseases, while poor diet and physical inactivity can increase the risk of chronic diseases. Addressing the underlying causes and risk factors for diseases and injuries is a key component of public health interventions and can help reduce the overall burden of disease.</p>
-<p>Here is an example of how the DALY metric can be used for prevention in R:</p>
+<p>As an example here is shown how the DALY metric can be used for prevention:</p>
 <p>Suppose we have data on the number of cases of a particular disease, as well as the average number of years of life lost due to this disease. We can use this information to calculate the total number of DALYs lost due to this disease.</p>
 <div class="cell">
 <details><summary>Show the code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load the library 'dplyr'</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Create a data frame with the number of cases and average years of life lost</span></span>
-<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>cases <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">200</span>, <span class="fl">300</span><span class="op">)</span>,</span>
-<span>                 years_lost <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span>, <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>YLL <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span>, <span class="fl">15</span><span class="op">)</span>,</span>
+<span>                 YLD <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">3</span>,<span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Calculate the number of DALYs lost</span></span>
-<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>dalys <span class="op">=</span> <span class="va">cases</span> <span class="op">*</span> <span class="va">years_lost</span><span class="op">)</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>DALY <span class="op">=</span> <span class="va">YLL</span> <span class="op">+</span> <span class="va">YLD</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Sum the total number of DALYs lost</span></span>
-<span><span class="va">total_dalys</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">dalys</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<span><span class="va">total_dalys</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">DALY</span><span class="op">)</span></span>
+<span><span class="va">total_dalys</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 38</code></pre>
 </div>
-<p>In this example, we first create a data frame with the number of cases of the disease and the average years of life lost for each case. Then, we use the mutate() function from the dplyr library to calculate the number of DALYs lost for each case. Finally, we use the sum() function to find the total number of DALYs lost for the entire population.</p>
+</div>
+<p>In this example, the number of cases of the disease and the average years of life lost for each case are used to calculate the number of DALYs lost for each case. Finally, the total number of DALYs lost for the entire population.</p>
 <p>This information can be used to inform public health interventions to prevent the spread of this disease and reduce the number of DALYs lost. For example, the information could be used to prioritize resources for disease control and prevention activities, such as health education campaigns, vaccination programs, and screening and treatment programs.</p>
 
 
