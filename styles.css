@@ -1,0 +1,126 @@
+/* css styles */
+/* Cleaned CSS: Hero, Cards, Footer */
+/* Hero Section */
+
+.hero-section {
+  position: relative; /* Needed for absolute positioning inside */
+  padding-top: 1rem;  /* Make sure there's enough top padding */
+  /* min-height: 90vh;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+/*logo on the homepage*/
+.hero-logo-fixed {
+  position: absolute;
+  top: -1rem; /* Push down more if needed */
+  left: 0rem;
+  max-height: 250px;
+  width: auto;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+
+/* Call to Action Button - become a member button*/
+.cta-button {
+  display: inline-block;
+  background: rgb(248, 216, 217);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid rgb(248, 216, 217);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.navbar .navbar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-brand img {
+  max-height: 100px; /* or even 30px if needed */
+  }
+
+
+@media (max-width: 768px) {
+  /* Logo tweaks */
+.hero-logo-fixed {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 200px;
+}
+
+  /* Push hero content down so it doesn't overlap logo */
+.hero-content {
+    margin-top: 7rem;
+  }
+
+  /* Navbar layout fixes my website */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 1rem;
+    width: 200%;
+  }
+  
+.navbar .navbar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-brand img {
+  max-height: 40px; /* or even 30px if needed */
+  }
+
+/*.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    align-items: center;
+    width: 100%;
+  }*/
+
+.navbar-nav .nav-item {/* controls the navbar tabs location when folded*/
+    width: 100%;
+    text-align: left;
+    /* change the size and bold text*/
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+.navbar-nav .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+
+
+
+}
+
+
+
