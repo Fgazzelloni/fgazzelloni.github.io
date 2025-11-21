@@ -1,0 +1,24 @@
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+    css: styles.css  
+    toc: false
+    smooth-scroll: true
+    highlight-style: github
+    link-external-newwindow: true
+    link-external-icon: false
+    citations-hover: true
+    footnotes-hover: true
+    code-copy: true
+    code-overflow: wrap
+    code-link: true
+    back-to-top-navigation: true 
+    page-navigation: true
+    #title-block-banner: true
+    #include-in-header: 
+     # - text: |
+      #    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js">
+
+editor: visual

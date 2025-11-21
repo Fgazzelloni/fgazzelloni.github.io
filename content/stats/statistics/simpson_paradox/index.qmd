@@ -1,0 +1,111 @@
+---
+title: "Understanding Simpson's Paradox: A Simple Explanation"
+date: '2024-01-12'
+image: featured.png
+slug: bayesian-statistics
+categories:
+  - rstats
+  - modeling
+summary: "The key to resolving Simpson’s Paradox is to recognise that the question “is men or women the best choise of the next managerial postion” is a causal one."
+execute: 
+  eval: true
+---
+
+<center>![](https://media.giphy.com/media/aQt5QYJm0FZo4/giphy.gif)</center>
+
+`Simpson's Paradox` is a statistical phenomenon where a trend appears in different groups of data but disappears or reverses when these groups are combined. This paradox highlights the importance of considering confounding variables and understanding the causal relationship between variables.
+
+### Example Scenario: Work Environment
+
+Let's consider a hypothetical work environment where the number of women (W) is greater than the number of men (M). However, when looking at the distribution of managerial positions (P), it seems that more men occupy higher-level positions compared to women.
+
+Now, suppose there's a characteristic Z, representing gender, and you suspect it might influence the choice of assigning a managerial position (P) because a specific time dedicated to a critical task (T) is primarily marketed toward men (M).
+
+To illustrate this paradox, we'll create synthetic data in R.
+
+#### Install and load necessary library
+
+```{r}
+#| warning: false
+#| message: false
+library(dplyr)
+```
+
+#### Set seed for reproducibility
+
+```{r}
+set.seed(123)
+```
+
+#### Generate synthetic data
+
+```{r}
+n <- 1000  # Number of employees 
+W <- round(runif(n, 200, 800))  # Number of women
+M <- n - W  # Number of men
+```
+
+#### Assign managerial positions based on gender and a confounding variable
+
+```{r}
+P_W <- round(runif(W, 0, 1))  # 0 for no managerial position, 1 for managerial position for women
+P_M <- round(runif(M, 0.2, 1))  # Higher chance of managerial position for men due to confounding variable
+```
+
+#### Create a data frame
+
+```{r}
+w <- tibble(gender="Women",count=W,manager=P_W)
+
+m <- tibble(gender="Men",count=M,manager=P_M)
+
+data <- rbind(w,m)
+data%>%head
+```
+
+#### Display the initial summary
+
+```{r}
+summary(data)
+```
+
+In this example, we have created a dataset with a larger number of women, but the chance of obtaining a managerial position for men is influenced by a confounding variable. Now, let's examine the paradox.
+
+### Calculate the proportion of managerial positions for each gender
+
+```{r}
+proportion_table <- data %>%
+  group_by(gender) %>%
+  summarize(proportion = mean(manager))
+```
+
+#### Display the proportions
+
+```{r}
+proportion_table
+```
+
+```{r}
+library(ggplot2)
+proportion_table%>%
+  ggplot(aes(gender,proportion,fill=gender))+
+  geom_col(color="white",show.legend = F)+
+  scale_fill_viridis_d()+
+  labs(title = "Proportion of Managers by Gender",
+       subtitle = "Example of the Simpson's Paradox",
+       x="",
+       caption = "Data: Syntetic | Graphics: Federica Gazzelloni") +
+  coord_equal()+
+  ggthemes::theme_pander()+
+  theme(plot.caption = element_text(hjust = 0.5))
+```
+
+```{r}
+#| eval: false
+#| echo: false
+ggsave("featured.png",width = 6,height = 4)
+```
+
+In this scenario, when examining the proportion of managerial positions within each gender group, it might appear that men have a higher chance. However, when we consider the entire dataset, we may find the opposite due to the confounding variable.
+
+The key takeaway is that understanding causation is crucial, and Simpson's Paradox emphasizes the need to consider confounding factors when interpreting data.

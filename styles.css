@@ -1,0 +1,167 @@
+/* ----------------------------------------------------------
+   GLOBAL BANNER + NAVBAR FIXES
+---------------------------------------------------------- */
+
+/* Scrolling Banner */
+.scrolling-banner {
+  background-color: #007a79; /*#fbd8da;  */
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+  margin-top: -1rem !important;
+  padding: 0rem !important;  /* slight breathing room */
+}
+
+
+/* Remove padding and margins applied by Quarto layout */
+.page-full,
+.page-layout-custom {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+main.content {
+  padding-top: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   HERO SECTION
+---------------------------------------------------------- */
+
+.hero-section {
+  position: relative;
+  padding-top: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0rem;
+}
+
+.hero-logo-fixed {
+  position: absolute;
+  top: -2rem;
+  left: 0rem;
+  max-height: 250px;
+  width: auto;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  text-align: center;
+  width: 100%;
+  margin-left: 2rem;
+  margin-right: auto;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------------------------------------
+   CTA BUTTON
+---------------------------------------------------------- */
+
+.cta-button {
+  display: inline-block;
+  background: rgb(248, 216, 217);
+  padding: 1rem 2rem;
+  margin-bottom: 1rem !important;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid rgb(248, 216, 217);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ----------------------------------------------------------
+   NAVBAR DESKTOP
+---------------------------------------------------------- */
+/* Remove border under navbar */
+
+.navbar {
+  border-bottom: none !important;
+  padding: 0rem;
+  width: 100%; 
+}
+  
+.navbar .navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.navbar-nav .nav-item {
+    font-size: 1.2rem;
+  }
+
+.navbar-brand img {
+  max-height: 100px;
+}
+
+/* ----------------------------------------------------------
+   NAVBAR MOBILE
+---------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+  /* Adjust logo for mobile */
+  .hero-logo-fixed {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 200px;
+  }
+
+  /* Prevent overlap between logo and hero text */
+  .hero-content {
+    margin-top: 10rem;
+  }
+
+  /* Navbar restructuring */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 0rem;
+    width: 100%; 
+  }
+  
+  .navbar .navbar-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-brand img {
+    max-height: 40px;
+  }
+
+  /* Nav links when folded */
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 0rem;
+    width: 100%;
+  }
+}
+

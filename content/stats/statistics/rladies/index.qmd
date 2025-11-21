@@ -1,0 +1,235 @@
+---
+title: "R-Ladies Events Stats"
+excerpt: "Statistics"
+date: 2024-03-12
+draft: false
+images: featured.png
+series:
+categories: text-analysis
+layout: single
+page-layout: full
+execute: 
+  eval: false
+---
+
+## Overview
+
+::: columns
+::: {.column width="80%"}
+Let's scrap the R-Ladies chapters events from Meetup.com We can use the `{meetupr}` package.
+
+```         
+urlname <- c("rladies-paris","rladies-rome")
+events <- purrr::map(urlname,get_events)
+dat <- dplyr::bind_rows(events)
+```
+:::
+
+::: {.column width="20%"}
+![RLadies Wordcloud](featured.png)
+:::
+:::
+
+Load necessary libraries
+
+```{r}
+suppressPackageStartupMessages({
+  library(meetupr)
+  library(jsonlite)
+  library(tidyverse)
+  library(stringr)
+  library(tidytext)
+  library(wordcloud)
+  library(topicmodels)
+  library(broom)
+  library(scales)
+})
+
+
+theme_set(theme_bw())
+```
+
+### R-Ladies Rome Events
+
+```{r}
+urlname <- "rladies-rome"
+events <- get_events(urlname)
+dplyr::arrange(events, desc(time))%>%
+  head()
+```
+
+```{r}
+urlname <- c("rladies-paris","rladies-rome")
+events <- purrr::map(urlname,get_events)
+dat <- dplyr::bind_rows(events)
+dat%>%
+  mutate(link=gsub("https://www.meetup.com/","",link),
+         chapter=stringr::str_extract(link, "^rladies(.+?)/"),
+         chapter=gsub("/","",chapter))%>%
+  count(chapter)
+```
+
+### All Chapters Events
+
+To do it for all chapters on meetup, we need the list of the chapters from the rladies github archive.
+
+```{r}
+
+data <- jsonlite::fromJSON('https://raw.githubusercontent.com/rladies/meetup_archive/main/data/events.json')
+```
+
+```{r}
+chapter <- data %>%
+  count(group_urlname)%>%
+  filter(!str_detect(group_urlname,"@"))
+chapters <- chapter$group_urlname
+
+events <- purrr::map(chapters,get_events)
+# saveRDS(events,"events.rds")
+# another way
+# x <- lapply(paths, func)
+# res <- dplyr::bind_rows(x)
+```
+
+```{r}
+bind_rows(events[1])%>%head()
+```
+
+```{r}
+dat <- dplyr::bind_rows(events)
+# saveRDS(dat,"dat.rds")
+```
+
+```{r}
+dat1 <- dat%>% 
+  mutate(link=gsub("https://www.meetup.com/","",link),
+         chapter=stringr::str_extract(link, "^rladies(.+?)/"),
+         chapter=gsub("/","",chapter))%>%
+  relocate(chapter)
+
+# saveRDS(dat1,"dat1.rds")
+```
+
+```{r}
+dat2 <- dat1%>%
+  select(time,chapter,title,going,venue_city,
+         venue_lon,venue_lat,venue_state,venue_country)%>%
+  mutate(time=as.Date(time))%>%
+  arrange(desc(going))
+```
+
+```{r}
+dat2%>%
+  mutate(year=year(time),.after = time)%>%
+  pull(year)%>%
+  summary(year)
+```
+
+```{r}
+dat3 <- dat2%>%
+  tidytext::unnest_tokens(word, title,drop = F)%>%
+  select(chapter,title,going,word)%>% 
+  anti_join(get_stopwords())%>%
+  filter(!str_length(word)<=3)
+```
+
+```{r}
+dat3%>%
+  count(word, sort = TRUE) %>%
+  with(wordcloud::wordcloud(word, n, max.words = 100))
+```
+
+### Latent Dirichlet Allocation with the topicmodels package
+
+```{r}
+chapters_dtm <- dat3 %>%
+  count(title, word, sort = TRUE)%>%
+  cast_dtm(title, word, n)
+
+chapters_dtm
+```
+
+```{r}
+chapters_lda <- topicmodels::LDA(chapters_dtm, 
+                    k = 4, 
+                    control = list(seed = 1234))
+chapters_lda_td <- tidy(chapters_lda)
+chapters_lda_td
+top_terms <- chapters_lda_td %>%
+  group_by(topic) %>%
+  slice_max(beta, n = 5) %>%
+  ungroup() %>%
+  arrange(topic, -beta)
+
+top_terms
+```
+
+```{r}
+top_terms %>%
+  mutate(term = reorder_within(term, beta, topic)) %>%
+  ggplot(aes(term, beta)) +
+  geom_col() +
+  scale_x_reordered() +
+  facet_wrap(vars(topic), scales = "free_x")
+
+
+assignments <- augment(chapters_lda, data = chapters_dtm)
+
+assignments%>%
+  filter(!term=="ladies")
+
+# how words in titles changed overtime
+inaug_freq <- dat3 %>%
+  inner_join(dat2,by=c("chapter","title","going"))%>%#View
+  count(time, word) %>%
+  complete(time, word, fill = list(n = 0)) %>%
+  group_by(time) %>%
+  mutate(time_total = sum(n), 
+         percent = n / time_total) %>%
+  ungroup()
+
+inaug_freq
+```
+
+```{r}
+# library(broom)
+models <- inaug_freq %>%
+  group_by(word) %>%
+  filter(sum(n) > 50) %>%
+  group_modify(
+    ~ tidy(glm(cbind(n, time_total - n) ~ time, ., 
+               family = "binomial"))
+  ) %>%
+  ungroup() %>%
+  filter(term == "time")
+
+models
+models %>%
+  filter(term == "time") %>%
+  arrange(desc(abs(estimate)))
+```
+
+```{r}
+models %>%
+  mutate(adjusted.p.value = p.adjust(p.value)) %>%
+  ggplot(aes(estimate, adjusted.p.value)) +
+  geom_point(shape=".") +
+  #scale_y_log10() +
+  geom_text(aes(label = word), 
+            #vjust = 1, hjust = 1, 
+            check_overlap = TRUE) +
+  labs(x = "Estimated change over time", y = "Adjusted p-value")
+```
+
+```{r}
+models %>%
+  slice_max(abs(estimate), n = 6) %>%
+  inner_join(inaug_freq) %>%
+  ggplot(aes(time, percent)) +
+  geom_point() +
+  geom_smooth() +
+  facet_wrap(vars(word)) +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(y = "Frequency of word in speech")
+
+```

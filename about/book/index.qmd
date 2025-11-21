@@ -1,0 +1,36 @@
+### Health Metrics and the Spread of Infectious Diseases: Machine Learning Applications and Spatial Modelling Analysis with R
+
+Discover the fascinating world of health metrics and infectious disease analysis with our manual! 
+
+Whether you're new to the field or a seasoned practitioner, this resource offers valuable insights into key concepts and practical applications.
+
+:::::{.callout}
+
+::::{.columns}
+
+::: {.column width="60%"}
+
+Read it online for free: 
+
+- 👉 🔗 [hmsidR](https://bookdown.org/fede_gazzelloni/hmsidR)
+
+Reserve your paperback copy: 
+
+- 👉 🔗[Routledge Website](https://www.routledge.com/Health-Metrics-and-the-Spread-of-Infectious-Diseases-Machine-Learning-Applications-and--Spatial-Modelling-Analysis-with-R/Gazzelloni/p/book/9781032625782)
+- 👉 🔗[Amazon](https://www.amazon.com/Health-Metrics-Spread-Infectious-Diseases/dp/1032625783/)
+:::
+
+::: {.column width="40%"}
+
+![Editor CRC Press - Chapman & Hall](images/book_cover.png){width="50%" height="auto"}
+:::
+::::
+
+:::::
+\
+
+Learn about essential public health metrics like **DALYs**, **YLL**, and **YLD**, which provide crucial indicators of a population's health status. Dive into recent infectious disease outbreaks, including the impact of Covid19, and explore the most affected locations.
+
+With a mix of explanatory text and hands-on R code examples, you'll become proficient in analyzing real-world case studies. We'll compare health metrics across different locations and test predictive models using `tidymodels` and `INLA.` Plus, you'll discover the power of spatial visualization techniques using `ggplot2`, `leaflet`, `sf`, `rgdal`, and other popular R packages. Whether you're a beginner or an advanced practitioner, this book is designed to enhance your understanding and skills in health data analysis.
+
+Ideal for early-stage practitioners and graduate students in public health, this resource is your guide to unlocking the full potential of R for spatial and health metrics analysis.

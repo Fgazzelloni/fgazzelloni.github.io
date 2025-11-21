@@ -1,0 +1,32 @@
+### Authored & Co-authored Publications
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(scholar)
+library(tidyverse)
+
+
+id <- 'Xes0-r0AAAAJ'
+```
+
+```{r}
+#| echo: false
+p <- get_publications(id)
+pp <- p%>%
+  select(year,journal,title,author,pubid)%>%
+  filter(!journal=="")%>%
+  arrange(desc(year)) %>%
+  rename_with(~str_to_title(.x))%>%
+  mutate(N = rev(row_number()),
+         .before = everything()) 
+```
+
+```{r}
+#| echo: false
+knitr::kable(pp, 
+             format = 'html', 
+             caption = 'List of Publications 2020 to Present')
+```

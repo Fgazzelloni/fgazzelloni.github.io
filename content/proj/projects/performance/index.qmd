@@ -1,0 +1,206 @@
+---
+title: "Measuring Health Performance"
+excerpt: "Machine learning models"
+date: 2023-03-14
+draft: false
+images:
+series:
+categories: 
+layout: single
+page-layout: full
+---
+
+## Overview
+
+::: columns
+::: {.column width="80%"}
+These days measuring performance is very appropriate for many different topics. Thinking about health and the fast changing environments, including climate changes, require a ready tool for identifying possible future outcomes. On health, interesting simple metrics are used to classify the state of health of a population, so to be comparable with other near and far.
+
+Here is a spec of my latest project where I am collecting all that I learned since the start of the Covid19 pandemic on a summary of the techniques used for measuring the health status of a population when in conjunction with an extreme event. Many tools are available and ready to use for the most exceptional purpose someone might had in mind, and I had difficulties choosing one on top of the other. But, why choosing if you can combine them?
+:::
+
+::: {.column width="20%"}
+![](featured.png)
+:::
+:::
+
+There are three metrics that are used for the purpose of classification in the public health, the DALYs, YLLs, and the YLDs. Respectively are the **Disability Adjusted Life Years**, **Years of Life Lost**, and **Years Lived with Disabilities**.
+
+Before going into the calculation detail, the definition of **good health and well being** is required.
+
+The [WHO](https://bit.ly/3mU4tbJ) constitution states:
+
+> "Health is a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity."
+
+An important implication of this definition is that mental health is more than just the absence of mental disorders or disabilities.
+
+Let's load the {hmsidwR} package, still at its very early stages; a development version can be installed from GitHub:
+
+```{r}
+#| eval: false
+devtools::install_github("Fgazzelloni/hmsidwR")
+```
+
+```{r}
+#| warning: false
+#| message: false
+library(tidyverse)
+library(hmsidwR)
+```
+
+It contains some interesting datasets:
+
+The Global life tables: **Glifetables**. A dataset provided by the **World Health Organization (WHO)**. [Global Health Observatory data repository](https://apps.who.int/gho/data/)
+
+```{r}
+#| eval: false
+?hmsidwR
+```
+
+And the Germany lung cancer: **Germany_lungc**. A dataset provided by the **Institute for Health Metrics and Evaluation (IHME)**. [GBD Results](https://bit.ly/3YMfol8)
+
+```{r}
+hmsidwR::germany_lungc %>% head
+```
+
+```{r}
+germany_lungc %>%
+  ggplot(aes(age, dx, fill = sex)) +
+  geom_col() +
+  facet_wrap( ~ sex) +
+  scale_x_discrete(breaks = c("35-39", "65-69", "85+")) +
+  ggthemes::scale_fill_fivethirtyeight() +
+  ggthemes::theme_fivethirtyeight() +
+  labs(title = "Germany lung cancer -2019",
+       caption = "Vis: fgazzelloni|DataSource: IHME")
+```
+
+The combination of this to piece of information, the life expectancy and the expected value of lung cancer cases, in proportion of the Germany population, are combined by age class and divided by sex to obtain the YLLs, the numbers of years of life lost.
+
+In this case for Germany data is available from the age class 10-14, if we would like to improve this analysis it required some missing value imputation, through data feature engineering.
+
+```{r}
+yll <- germany_lungc %>%
+  full_join(
+    gho_lifetables %>%
+      filter(year == 2019,
+             indicator == "ex") %>%
+      rename(life_expectancy = value),
+    by = c("age", "sex")
+  ) %>%
+  group_by(age, sex) %>%
+  reframe(yll = dx * life_expectancy) %>%
+  filter(!is.na(yll))
+
+yll %>%
+  head()
+```
+
+```{r}
+yll %>%
+  ggplot(aes(age, yll, fill = sex)) +
+  geom_col() +
+  facet_wrap( ~ sex) +
+  scale_x_discrete(breaks = c("35-39", "65-69", "85+")) +
+  ggthemes::scale_fill_fivethirtyeight() +
+  ggthemes::theme_fivethirtyeight() +
+  labs(title = "YLL - Germany lung cancer -2019",
+       caption = "Vis: fgazzelloni|DataSource: IHME & WHO")
+```
+
+To build the YLDs, the numbers of years lived with a disability due to a disease or injury, we need more data: the **prevalence**, and the **disability weights**.
+
+source:
+
+-   [disability weights](https://ghdx.healthdata.org/record/ihme-data/gbd-2019-disability-weights)
+
+Then, the sum of the YLL and the YLD provides the overall value of the DALY which is the key metric used to state the health of a population, and it is used to make comparisons among population of different countries, as well as begin used to provide a comprehensive assessment of the impact of disease and injury on a population, and help prioritize public health interventions and evaluate the effectiveness of public health programs.
+
+Let's now have a look at how **infectious diseases** can affect the DALYs. The COVID-19 pandemic has had a significant impact on DALYs metrics worldwide.
+
+Still results are not fully available, but several of the risk factors and non-communicable diseases (NCDs) highlighted by the GBD study, including obesity, diabetes, and cardiovascular disease, are associated with increased risk of serious illness and death from COVID-19, and so, as a consequence linked with an increase of the overall level of DALYs. See [The Lancet: Latest global disease estimates reveal perfect storm of rising chronic diseases and public health failures fuelling COVID-19 pandemic](https://www.healthdata.org/news-release/lancet-latest-global-disease-estimates-reveal-perfect-storm-rising-chronic-diseases-and)
+
+COVID-19 is expected to show clearly that it has been the leading cause of global DALYs in 2020.
+
+More information on the level of findings are in this interesting article: <https://doi.org/10.1016/S0140-6736(20)30925-9> on the Lancet by the **GBD collaborator team**.
+
+### Global impact of selected infectious disease on DALYs
+
+Looking at the Global impact of some infectious diseases, such as: Ebola.
+
+The impact of Ebola on DALYs in 2019 can be assessed by comparing the number of DALYs due to Ebola in 2019 to the DALYs caused by other diseases or conditions during the same period.
+
+According to the Global Health Data Exchange (GHDx), the estimated global DALY rate for Ebola virus disease in 2019 was 0.0005, which is relatively low compared to other leading causes of DALYs, such as cardiovascular diseases, lower respiratory infections, and neonatal disorders. See [IHME Ebola — Level 3 cause](https://bit.ly/40dboLg)
+
+Import data on global burden of disease (GBD) for a given year, here I already downloaded the cvs file and save it as RData.
+
+```{r}
+#| eval: false
+#| echo: false
+# df_gbd_2019 <- read_csv("~/Documents/R/GBD/IHME/DALY/IHME-GBD_2019_DATA-b377ea9a-1.csv")
+# save(df_gbd_2019,file = "data/df_gbd_2019.RData")
+```
+
+```{r}
+#| echo: false
+load("data/df_gbd_2019.RData")
+```
+
+```{r}
+# Subset data to only include 
+df_dalys_2019 <- df_gbd_2019 %>%
+  filter(location_name == "Global",
+         sex_name == "Both") %>%
+  select(!contains("_id"))
+
+
+df_dalys_2019 %>% count(age_name, val)
+```
+
+Let's have a look at the **DALYs rates** and consider the average value by 5 years range, then calculate the total DALYs for all ages in 2019.
+
+```{r}
+avg_dalys_2019 <- mean(df_dalys_2019$val)
+avg_dalys_2019
+```
+
+```{r}
+total_dalys_2019 <- sum(df_dalys_2019$val)
+total_dalys_2019
+```
+
+Import data on infectious diseases, and select Global, Ebola, both sex.
+
+```{r}
+#| eval: false
+#| echo: false
+# infectious_diseases <- read_csv("~/Documents/R/GBD/IHME/DALY/infectious_diseases.csv")
+# save(infectious_diseases,file = "data/infectious_diseases.RData")
+```
+
+```{r}
+#| echo: false
+load("data/infectious_diseases.RData")
+```
+
+```{r}
+ebola_global_2019 <- infectious_diseases %>%
+  filter(location_name == "Global",
+         sex_name == "Both",
+         cause_name == "Ebola") %>%
+  select(!contains("_id"))
+
+# Calculate total COVID-19 DALYs for 2019
+total_ebola_global_2019 <-
+  sum(ebola_global_2019$val)
+
+# Calculate the percentage change in DALYs due to COVID-19
+percent_change_dalys <- round((total_ebola_global_2019 / total_dalys_2019) *100,4)
+
+# Print the percentage change in DALYs due to COVID-19
+cat("Total impact of Ebola virus Globally on DALYs rates in 2019:", percent_change_dalys, "%")
+```
+
+However, the impact of Ebola on DALYs is more significant in certain African regions, it accounts for the whole population. For example, during the 2014-2016, the Ebola outbreak in West Africa caused an estimated 11,000 deaths and 261,000 DALYs lost.
+
+Overall, while the global impact of Ebola on DALYs in 2019 was relatively low, it is still an important health concern in areas where outbreaks occur, and efforts to prevent and control the disease are crucial to reducing its impact on affected populations.

@@ -1,0 +1,43 @@
+### CDC Centers for Disease Control
+
+**Data Analysis and Visualization with R**
+
+Date: 2024-08-19 to 2024-08-20 \| Centers for Disease Control
+
+Website: <https://rrlove-cdc.github.io/2024-08-19-cdc-online/>
+
+EtherPad: <https://pad.carpentries.org/2024-08-19-cdc-online>
+
+------------------------------------------------------------------------
+
+**Data Carpentry Genomics**
+
+Date: 2024-06-10 to 2024-06-13 \| Centers for Disease Control
+
+Website: <https://fgazzelloni.github.io/2024-06-10-cdc-online/>
+
+EtherPad: <https://pad.carpentries.org/2024-06-10-cdc-online>
+
+------------------------------------------------------------------------
+
+### University of Washington
+
+**Network of the National Library of Medicine (NNLM) Region 5 Library Carpentry**
+
+Date: March 19-21 2024 \| Network of the National Library of Medicine (NNLM)
+
+Website: <https://nnlm-ncds.github.io/2024-03-19-nnlm-uw-online/>
+
+EtherPad: <https://pad.carpentries.org/2024-03-19-nnlm-uw-online>
+
+------------------------------------------------------------------------
+
+### Helmholtz Information & Data Science Academy
+
+**Software Carpentry (Shell, Git, and programming with R)**
+
+Date: February 12-13 2024 \| Helmholtz Online
+
+Website: <https://macrobiotus.github.io/2024-02-12-helmholtz-online/>
+
+EtherPad: <https://pad.carpentries.org/2024-02-12-helmholtz-online>

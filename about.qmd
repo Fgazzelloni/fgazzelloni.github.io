@@ -1,0 +1,69 @@
+---
+title: "About"
+image: images/profile.png
+image-alt: "Federica Gazzelloni"
+cap-location: bottom
+description: "Thanks for stopping by and exploring my journey!"
+page-layout: full
+title-block-banner: true
+page-navigation: true
+back-to-top-navigation: true
+about:
+  template: trestles
+  image-width: 20em
+  image-shape: round
+  links: 
+    - text: LinkedIn
+      url: "https://linkedin.com/in/federicagazzelloni"
+    - text: Twitter (X)
+      icon: twitter
+      url: "https://twitter.com/FGazzelloni"  
+    - text: 🦋 Bluesky
+      url: "https://bsky.app/profile/fgazzelloni.bsky.social"
+    - text: Mastodon
+      icon: mastodon
+      url:  "https://fosstodon.org/@fgazzelloni"
+    - text: GitHub
+      icon: github
+      url: "https://github.com/fgazzelloni"
+    - text: Youtube
+      icon: youtube
+      url: "https://www.youtube.com/@federicagazzelloni"  
+    - text: Email
+      url: "mailto:fede.gazzelloni@gmail.com" 
+    - text: "{{< ai orcid size=xl >}}"
+      href: https://orcid.org/0000-0002-4285-611X
+      
+    - text: "{{< ai google-scholar size=xl >}}"
+      href: https://scholar.google.com/citations?hl=en&user=Xes0-r0AAAAJ
+---
+
+:::: panel-tabset
+## About
+
+{{< include about/profile/index.qmd >}}
+
+## Book
+
+{{< include about/book/index.qmd >}}
+
+## Workshops
+
+{{< include about/workshops/index.qmd >}}
+
+## Talks
+
+::: {style="margin-top: 10px; face: bold;font-size: 2em; color: #343a40;"}
+List of my talks
+:::
+
+{{< include about/talks/index.qmd >}}
+
+## R-Ladies
+
+{{< include about/rladies/index.qmd >}}
+
+## Papers
+
+{{< include about/papers/index.qmd >}}
+::::

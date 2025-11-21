@@ -1,0 +1,114 @@
+---
+listing:
+  contents: content
+  sort: "date desc"
+  type: grid
+  image-height: "200"
+  max-items: 3
+  categories: false
+  feed: true
+page-layout: article
+toc: false
+title-block-banner: true
+---
+
+::: {.page-full}
+
+```{=html}
+<div class="scrolling-banner">
+  <p class="multipleStrings"></p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+
+<script>
+  new TypeIt(".multipleStrings", {
+      strings: [
+      "Welcome to my Website 💡", 
+      "Book available to pre-order 📚", 
+      "Health Metrics and the Spread of Infectious Diseases 🦠", 
+      "Stay tuned for the latest developments 🔍"
+      ],
+      breakLines: false,
+      loop: true,
+      speed: 50
+  }).go();
+</script>
+```
+
+:::
+
+
+
+```{=html}
+<div class="hero-section">
+    <img src="images/homepage-transparent.png" alt="homepage Logo" class="hero-logo-fixed" />
+    
+  <div class="hero-content">
+    <h3 class="hero-title">Welcome</h3>
+    <p class="hero-subtitle" style="font-size: 2rem;">Data Science Hub</p>
+    <p class="hero-description">
+This is a dedicated platform for sharing ideas, insights, resources, and projects made in R and Python programming languages. With expertise in advanced statistical methods, data modeling, and public health analytics, I focus on topics like health metrics and the dynamics of infectious diseases.
+    </p>
+    <a href="https://www.amazon.com/Health-Metrics-Spread-Infectious-Diseases/dp/1032625783/" 
+    class="cta-button">Buy my Book</a>
+  </div>
+</div>
+```
+
+
+## News: HMSID Book Is Available ONLINE and for PRE-ORDER!
+
+> Gazzelloni, Federica. Health Metrics and the Spread of Infectious Diseases: Machine Learning Applications and Spatial Modelling Analysis with R. First edition. Boca Raton, FL: CRC Press, 2025. Print.
+
+### 🎉 Explore the Online and Printed Versions
+
+📖 Read it online for free:
+
+-   🔗 [bookdown.org/fede_gazzelloni/hmsidR](https://bookdown.org/fede_gazzelloni/hmsidR/)
+-   🔗 [fgazzelloni.quarto.pub/hmsidr](https://fgazzelloni.quarto.pub/hmsidr/)
+
+🛒 Pre-Order your printed copy:
+
+-   Reserve it today from:👉 [Routledge Website](https://www.routledge.com/Health-Metrics-and-the-Spread-of-Infectious-Diseases-Machine-Learning-Applications-and--Spatial-Modelling-Analysis-with-R/Gazzelloni/p/book/9781032625782) or 👉 [Amazon](https://www.amazon.com/Health-Metrics-Spread-Infectious-Diseases/dp/1032625783/)
+
+:::{.callout}
+> It’s been an incredible journey, and now that the book is officially printed and available for pre-order, I feel a mix of emotions—both the excitement of sharing it with you and a touch of nostalgia as this creative process comes to a close. 😌
+
+Writing this book has been an immensely rewarding experience. I’ve spent countless hours selecting the right material and striving to present it in a way that’s accessible and helpful for early-career researchers and students. One of the biggest challenges was deciding what to include and what to leave out, constantly refining the content to ensure it’s both comprehensive and easy to follow.
+
+Even though the book is now published, my mind is still buzzing with ideas. There’s always that lingering thought of what else could be added to make it even better. But at some point, you have to step back and trust that what you’ve created will serve its purpose. And now, it’s time to see how it will resonate with you, the readers.
+
+> As I reflect on this journey, I’m filled with gratitude for all the support and feedback I’ve received along the way. Your encouragement has been invaluable in shaping this book into what it is today.
+
+So, what’s next? While this project may be wrapping up, my passion for writing and sharing knowledge is far from over. Stay tuned for more updates and future projects! In the meantime, I invite you to dive into the book, explore its content, and share your thoughts. Your insights will be crucial as I continue to learn and grow.
+
+Thank you for being a part of this journey. I hope the book serves as a valuable resource for your research and studies. Let’s see where this new chapter takes us!
+
+**Happy reading! 📚✨**
+:::
+
+
+```{=html}
+<div class="hero-content">
+  <center><a href="https://www.youtube.com/@federicagazzelloni" class="cta-button">SUBSCRIBE</a>
+    <p class="hero-subtitle" style="font-size: 1.5rem;">Subscribe for the latest tutorials and insights in Data Science and R Programming!</p>
+    <video width="60%" height="auto" autoplay loop muted playsinline>
+    <source src="images/welcome-video.mp4" type="video/mp4">
+    </video>
+     </center>
+</div>
+```
+
+
+
+:::: column-page
+::: {style="margin-top: 10px; font-size: 3em;  font-weight: bold; text-align: center; background-color: #343a40; color: white;"}
+Latest content
+:::
+::::
+
+
+
+<link rel="me" href="https://fosstodon.org/@fgazzelloni">
