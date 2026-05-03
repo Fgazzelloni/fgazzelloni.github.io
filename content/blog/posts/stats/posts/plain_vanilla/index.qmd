@@ -1,6 +1,6 @@
 ---
-title: "Understanding Plain Vanilla - from Scratch"
-description: "Artificial neural network tutorial in R explaining a plain vanilla model, activation functions, weights, and backpropagation."
+title: "Plain Vanilla Neural Network from Scratch in R"
+description: "R tutorial building a plain vanilla neural network from scratch, with activation functions, weights, backpropagation, and synthetic data."
 date: '2024-06-28'
 summary: "This is a simple introduction to Artificial Neural Networks (ANN) from scratch using R outside the library boxes | used in Ch10 ISLR Book-Club."
 image: featured.png
@@ -15,6 +15,8 @@ margin-header: |
 ---
 
 ## Overview
+
+This tutorial builds a plain vanilla neural network from scratch in R. It is aimed at readers who want to understand the mechanics of artificial neural networks before relying on high-level libraries, including activation functions, weights, synthetic data, and backpropagation.
 
 In the world of artificial intelligence, understanding the fundamentals of neural networks is essential. One of the simplest yet powerful architectures is the **Artificial Neural Network (ANN) with a single hidden layer, often referred to as a "plain vanilla" network**. This blog post aims to provide a comprehensive guide to building such a network from scratch, focusing on key concepts like activation functions, weights, and the backpropagation algorithm outside the library boxes.
 

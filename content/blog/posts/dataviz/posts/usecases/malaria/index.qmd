@@ -1,6 +1,6 @@
 ---
-title: "The case of Malaria"
-description: "Public health data analysis of malaria cases using R, WHO and World Bank data, maps, and epidemic context."
+title: "Malaria Data Analysis in R with WHO and World Bank Data"
+description: "Public health data analysis of malaria in R using WHO malaria map data, World Bank indicators, epidemic context, and visualization."
 excerpt: ""
 date: 2023-08-27
 draft: false
@@ -13,6 +13,8 @@ execute:
 ---
 
 ## Overview
+
+This post explores malaria data analysis in R using WHO malaria map data, World Bank indicators, and public health context. It focuses on how data visualization and exploratory analysis can help interpret malaria risk, mosquito information, and locally acquired cases.
 
 > August 18, 2023 "A case of locally acquired #malaria has been confirmed in Maryland, Washington, D.C., area. Nine cases have been reported this summer in Florida and Texas, the first in the US in 20 years, according to the US Centers for Disease Control and Prevention. #epidemics" [^1]
 

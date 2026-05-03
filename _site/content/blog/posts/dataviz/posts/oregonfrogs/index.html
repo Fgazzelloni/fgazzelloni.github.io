@@ -5,8 +5,8 @@
 <meta name="generator" content="quarto-1.8.27">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="dcterms.date" content="2022-08-02">
-<meta name="description" content="R data visualization using TidyTuesday Oregon spotted frog data, custom plots, and related package workflows.">
-<title>Oregon Spotted a frog: Rana Pretiosa – Federica Gazzelloni</title>
+<meta name="description" content="R data visualization tutorial using TidyTuesday Oregon spotted frog data, custom plots, spatial context, and package workflows.">
+<title>Oregon Spotted Frog Data Visualization in R – Federica Gazzelloni</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,15 +127,15 @@ cookieconsent.run({
 });
 </script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="stylesheet" href="../../../../../../styles.css">
-<meta property="og:title" content="Oregon Spotted a frog: Rana Pretiosa – Federica Gazzelloni">
-<meta property="og:description" content="R data visualization using TidyTuesday Oregon spotted frog data, custom plots, and related package workflows.">
+<meta property="og:title" content="Oregon Spotted Frog Data Visualization in R – Federica Gazzelloni">
+<meta property="og:description" content="R data visualization tutorial using TidyTuesday Oregon spotted frog data, custom plots, spatial context, and package workflows.">
 <meta property="og:image" content="https://federicagazzelloni.com/content/blog/posts/dataviz/posts/oregonfrogs/featured.png">
 <meta property="og:site_name" content="Federica Gazzelloni">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="2560">
 <meta property="og:image:width" content="3200">
-<meta name="twitter:title" content="Oregon Spotted a frog: Rana Pretiosa – Federica Gazzelloni">
-<meta name="twitter:description" content="R data visualization using TidyTuesday Oregon spotted frog data, custom plots, and related package workflows.">
+<meta name="twitter:title" content="Oregon Spotted Frog Data Visualization in R – Federica Gazzelloni">
+<meta name="twitter:description" content="R data visualization tutorial using TidyTuesday Oregon spotted frog data, custom plots, spatial context, and package workflows.">
 <meta name="twitter:image" content="https://federicagazzelloni.com/content/blog/posts/dataviz/posts/oregonfrogs/featured.png">
 <meta name="twitter:creator" content="@fgazzelloni">
 <meta name="twitter:image-height" content="2560">
@@ -190,7 +190,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-packages">
 <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/index.html">
- <span class="dropdown-text">R Packages</span></a>
+ <span class="dropdown-text">R Packages for Health Metrics, Data Visualization, and Teaching</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/posts/oregonfrogs/index.html">
@@ -213,7 +213,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-books">
 <li>
     <a class="dropdown-item" href="../../../../../../content/books/index.html">
- <span class="dropdown-text">Books Writing</span></a>
+ <span class="dropdown-text">Books on Health Metrics, R, and Data Science</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/books/posts/hmsid/index.html">
@@ -232,7 +232,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">
 <li>
     <a class="dropdown-item" href="../../../../../../content/proj/index.html">
- <span class="dropdown-text">Projects Overview</span></a>
+ <span class="dropdown-text">Projects in AI Automation and Performance Metrics</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/proj/posts/performance_metrics/index.html">
@@ -274,12 +274,12 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Oregon Spotted a frog: Rana Pretiosa</h1>
+<h1 class="title">Oregon Spotted Frog Data Visualization in R</h1>
 </div>
 
 <div>
   <div class="description">
-    R data visualization using TidyTuesday Oregon spotted frog data, custom plots, and related package workflows.
+    R data visualization tutorial using TidyTuesday Oregon spotted frog data, custom plots, spatial context, and package workflows.
   </div>
 </div>
 
@@ -300,6 +300,7 @@ cookieconsent.run({
 
 
 </header><section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This tutorial visualizes Oregon spotted frog data in R using the TidyTuesday dataset and related <code>{oregonfrogs}</code> package workflow. It combines ecological data, spatial context, model output, and custom plotting to communicate patterns in frog survey observations.</p>
 <p>This #TidyTuesday week 31 is all about <strong>Oregon Spotted a frog: Rana Pretiosa</strong>.</p>
 <p>Load the {tidyverse} and the data from: <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-08-02">#TidyTuesday GitHub repo</a></p>
 <div class="quarto-figure quarto-figure-center">

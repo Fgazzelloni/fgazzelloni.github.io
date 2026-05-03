@@ -1,6 +1,6 @@
 ---
-title: "Oregon Spotted a frog: Rana Pretiosa"
-description: "R data visualization using TidyTuesday Oregon spotted frog data, custom plots, and related package workflows."
+title: "Oregon Spotted Frog Data Visualization in R"
+description: "R data visualization tutorial using TidyTuesday Oregon spotted frog data, custom plots, spatial context, and package workflows."
 excerpt: "TidyTuesday 2022 Week 31"
 date: '2022-08-02'
 draft: false
@@ -15,6 +15,8 @@ execute:
 
 
 ## Overview
+
+This tutorial visualizes Oregon spotted frog data in R using the TidyTuesday dataset and related `{oregonfrogs}` package workflow. It combines ecological data, spatial context, model output, and custom plotting to communicate patterns in frog survey observations.
 
 This #TidyTuesday week 31 is all about **Oregon Spotted a frog: Rana Pretiosa**.
 

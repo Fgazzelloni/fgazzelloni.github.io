@@ -1,6 +1,6 @@
 ---
-title: "Retail Sales with ggstream"
-description: "R visualization of monthly state retail sales using ggstream, TidyTuesday data, and tidyverse workflows."
+title: "Retail Sales Streamgraph in R with ggstream"
+description: "R data visualization tutorial creating a retail sales streamgraph with ggstream, TidyTuesday data, tidyverse, and custom styling."
 excerpt: "TidyTuesday 2022 Week 50"
 date: 2023-01-31
 draft: false
@@ -14,6 +14,8 @@ execute:
 
 
 ## Overview
+
+This tutorial creates a retail sales streamgraph in R with `{ggstream}` and TidyTuesday monthly state retail sales data. It focuses on tidyverse data preparation, visual design choices, and custom styling for a polished data visualization workflow.
 
 This post is all about **Retail Sales with ggstream**, the dataset comes from [#TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-12-13) 2022 week 50 **Monthly State Retail Sales**.
 

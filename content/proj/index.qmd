@@ -1,6 +1,6 @@
 ---
-title: "Projects Overview"
-description: "Explore the latest projects and resources on AI Automation and Performance Metrics."
+title: "Projects in AI Automation and Performance Metrics"
+description: "Projects by Federica Gazzelloni on AI automation workflows, health performance metrics, R analysis, and reproducible data systems."
 listing:
   contents: posts/
   sort: "date desc"
@@ -14,9 +14,9 @@ page-navigation: true
 back-to-top-navigation: true
 ---
 
-# Welcome to the Projects Section
+## Projects in AI Automation and Performance Metrics
 
-Explore a variety of projects and resources that focus on **AI Automation**, **Performance Metrics**, and other innovative topics. This section is designed to provide insights, tools, and methodologies that can inspire and support your work.
+Explore projects and resources focused on **AI automation**, **performance metrics**, health index construction, and reproducible analytical systems. This section connects practical workflows with statistical thinking, showing how data tools can support research monitoring, health analytics, and repeatable decision processes.
 
 ### What You'll Find Here:
 
@@ -27,5 +27,3 @@ Explore a variety of projects and resources that focus on **AI Automation**, **P
 ### Latest Posts
 
 Below, you'll find the most recent posts from the Projects section, displayed in a grid layout for easy navigation. Click on any post to dive deeper into the details and insights.
-
-

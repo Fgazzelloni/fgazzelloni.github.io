@@ -1,6 +1,6 @@
 ---
 title: "The Hidden Math That Shapes Our Health: 5 Surprising Truths from Data Science"
-description: "Health metrics article explaining DALYs, risk exposure, epidemic prediction, AI models, and spatial public health analysis."
+description: "Health metrics article explaining DALYs, risk exposure, epidemic prediction, AI models, spatial analysis, and public health data science."
 date: '2026-01-08'
 image: featured.png
 slug: inside-a-book-in-r
@@ -15,6 +15,7 @@ execute:
 
 ## Overview
 
+This article explains core health metrics concepts from the book *Health Metrics and the Spread of Infectious Diseases*. It focuses on DALYs, risk exposure, epidemic prediction, AI models, and spatial public health analysis for readers who want a clearer view of how data science measures population health.
 
 **How do we measure the health of a nation?** The first number that often comes to mind is life expectancy. Japan, for example, boasts one of the world's highest, suggesting a simple story of success. Yet, this single figure can be misleading. A long life is not the same as a healthy life, and the story of our collective well-being is far more complex than one metric can capture.
 

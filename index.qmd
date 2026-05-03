@@ -1,5 +1,5 @@
 ---
-description: "Federica Gazzelloni's data science hub for R, Python, health metrics, infectious disease analytics, data visualization, books, podcasts, and projects."
+description: "Federica Gazzelloni shares health metrics, infectious disease analytics, R workflows, AI automation, actuarial science, books, podcasts, and teaching resources."
 listing:
   contents: content
   sort: "date desc"
@@ -11,7 +11,7 @@ listing:
   feed: true
 page-layout: article
 toc: false
-title-block-banner: true
+title-block-banner: false
 ---
 
 ::: {.page-full}
@@ -21,15 +21,14 @@ title-block-banner: true
   <p class="multipleStrings"></p>
 </div>
 
-
 <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
 
 <script>
   new TypeIt(".multipleStrings", {
       strings: [
-      "Welcome to my Website 💡", 
-      "Buy on Amazon📚", 
-      "Health Metrics and the Spread of Infectious Diseases 🦠", 
+      "Welcome to my Website",
+      "AI-augmented analytics for health, risk, and decision-making",
+      "Health Metrics and the Spread of Infectious Diseases",
       "New book in progress: Mortality 🔍 Analytics - more info coming soon 🔥"
       ],
       breakLines: false,
@@ -37,28 +36,49 @@ title-block-banner: true
       speed: 45
   }).go();
 </script>
+
+<section class="landing-hero" aria-labelledby="landing-title">
+  <div class="landing-hero__content">
+    <p class="landing-kicker">AI-first analytics · health metrics · R workflows</p>
+    <h1 id="landing-title">AI-Augmented Analytics for Health, Risk, and Decision-Making</h1>
+    <p class="landing-lede">
+      I design analytical workflows that combine AI, statistics, R, and health metrics to turn complex data into practical decisions.
+    </p>
+    <div class="landing-actions" aria-label="Primary homepage actions">
+      <a href="content/proj/posts/automation_workflow/" class="landing-button landing-button--primary">Explore AI Workflows</a>
+      <a href="content/books/posts/hmsid/" class="landing-button">Read the Book</a>
+      <a href="about/workshops/" class="landing-button">Workshops &amp; Talks</a>
+    </div>
+  </div>
+
+  <div class="landing-hero__visual" aria-label="Federica Gazzelloni analytics platform">
+    <img src="images/homepage-logo-highres-cutout.png" alt="Federica Gazzelloni DataMetricus AI analytics identity" />
+    <div class="landing-proof">
+      <span>Author</span>
+      <span>Health Metrics Research</span>
+      <span>R Educator</span>
+      <span>AI Workflow Builder</span>
+    </div>
+  </div>
+</section>
+
+<section class="landing-pathways" aria-label="Main website pathways">
+  <a href="content/proj/posts/automation_workflow/" class="landing-pathway">
+    <span>AI Workflows</span>
+    <strong>Build repeatable systems for research, monitoring, and decision support.</strong>
+  </a>
+  <a href="content/books/posts/hmsid/" class="landing-pathway">
+    <span>Health Metrics</span>
+    <strong>Explore infectious disease analytics, burden of disease, and spatial modelling.</strong>
+  </a>
+  <a href="content/blog/posts/stats/" class="landing-pathway">
+    <span>R &amp; Statistical Modelling</span>
+    <strong>Learn practical R workflows for models, visualization, and reproducible analysis.</strong>
+  </a>
+</section>
 ```
 
 :::
-
-
-
-```{=html}
-<div class="hero-section">
-    <img src="images/homepage-transparent.png" alt="homepage Logo" class="hero-logo-fixed" />
-    
-  <div class="hero-content">
-    <h3 class="hero-title">Welcome</h3>
-    <p class="hero-subtitle" style="font-size: 2rem;">Data Science Hub</p>
-    <p class="hero-description">
-This is a dedicated platform for sharing ideas, insights, resources, and projects made in R and Python programming languages. With expertise in advanced statistical methods, data modeling, and public health analytics, I focus on topics like health metrics and the dynamics of infectious diseases.
-    </p>
-    <a href="https://amzn.to/4aHGseT" 
-    class="cta-button">Buy my Book</a>
-  </div>
-</div>
-```
-
 
 ## News: Health Metrics and the Spread of Infectious Diseases — Now Published and Available Worldwide
 

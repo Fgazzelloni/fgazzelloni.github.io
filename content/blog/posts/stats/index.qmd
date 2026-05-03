@@ -1,6 +1,6 @@
 ---
-title: "Data Analytics and Statistical Techniques"
-description: "In this section, I explore various data analytics and statistical techniques used to derive insights from data."
+title: "Statistics Tutorials in R for Modelling and Data Analysis"
+description: "Statistics tutorials in R covering linear models, neural networks, Bayesian statistics, multiple testing, prediction, and data analysis."
 listing:
   contents: posts
   sort: "date desc"
@@ -13,3 +13,5 @@ title-block-banner: true
 page-navigation: true
 back-to-top-navigation: true
 ---
+
+This section collects statistics tutorials in R for modelling, prediction, and data analysis. Topics include linear regression, `geom_smooth()`, artificial neural networks, Bayesian statistics, multiple testing, Simpson's paradox, and applied statistical workflows.

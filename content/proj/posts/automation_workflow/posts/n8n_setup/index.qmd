@@ -3,7 +3,7 @@ title: "Building Your First Automation Assistant for Free with n8n and Oracle Cl
 subtitle: "A practical step-by-step guide to setting up your first personal automation system"
 excerpt: "Automation"
 date: 2026-03-31
-description: "A practical guide to building a free automation workflow using n8n on Oracle Cloud Free Tier. Learn how to set up infrastructure, build your first workflow, and design a foundation you can expand into AI assistants."
+description: "Step-by-step n8n and Oracle Cloud Free Tier guide for building a personal automation assistant, RSS workflow, and AI-ready automation base."
 images:
 series:
 categories:
@@ -26,6 +26,8 @@ execute:
 ::: {.column width="60%"}
 
 ### Why build a personal automation system?
+
+This guide explains how to build a first personal automation assistant with n8n, Oracle Cloud Free Tier, Ubuntu, and Docker. It is written for analysts and creators who want a low-cost foundation for RSS monitoring, daily briefings, AI summaries, and repeatable research workflows.
 
 Many people start exploring AI and automation by trying tools individually. They test a chatbot. They try an API. They read about agents.
 
@@ -227,5 +229,4 @@ Below is a visual representation of the final workflow described in this post. T
 - Expand gradually.
 
 Automation grows best through iteration. Build one workflow, improve it, and then add more.
-
 

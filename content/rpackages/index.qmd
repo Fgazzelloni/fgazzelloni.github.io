@@ -1,6 +1,6 @@
 ---
-title: "R Packages"
-description: "In this section I share my R packages that I have developed or contributed to along with documentation and usage examples."
+title: "R Packages for Health Metrics, Data Visualization, and Teaching"
+description: "R packages by Federica Gazzelloni for health metrics, ecological data, spatial analysis, data visualization, and reproducible teaching workflows."
 listing:
   contents: posts
   sort: "date desc"
@@ -13,6 +13,8 @@ title-block-banner: true
 page-navigation: true
 back-to-top-navigation: true
 ---
+
+This section collects R packages by Federica Gazzelloni for health metrics, ecological data, data visualization, spatial analysis, and teaching workflows. It is designed as a practical entry point for people looking for reproducible R tools, examples, documentation, and source code connected to applied analytics.
 
 Over time, a number of small R tools I developed for my own work have turned into packages that I now share publicly. To make them easier to find and explore, I have added a dedicated R Packages section to my website.
 

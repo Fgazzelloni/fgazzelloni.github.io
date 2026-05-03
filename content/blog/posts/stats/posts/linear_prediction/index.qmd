@@ -1,6 +1,6 @@
 ---
-title: "How does geom_smooth() make predictions"
-description: "R tutorial comparing linear model predictions from lm and predict with ggplot2 geom_smooth using historical cholera data."
+title: "How geom_smooth Makes Linear Model Predictions in R"
+description: "R tutorial comparing ggplot2 geom_smooth predictions with lm and predict using historical cholera deaths data."
 date: '2024-02-26'
 image: featured.png
 slug: model prediction
@@ -18,6 +18,8 @@ execute:
 
 ::: columns
 ::: {.column width="80%"}
+This tutorial explains how `ggplot2::geom_smooth()` makes linear model predictions in R. It compares the smoothed line from `geom_smooth(method = "lm")` with explicit `lm()` and `predict()` output using historical cholera deaths data.
+
 **Linear regression** is a statistical technique used to represent the linear relationship between a response $(y)$ and a predictor $(x)$.
 
 $$

@@ -1,6 +1,6 @@
 ---
-title: "Books Writing"
-description: "Section dedicated to my authored books on data science, R programming, and data visualization."
+title: "Books on Health Metrics, R, and Data Science"
+description: "Books by Federica Gazzelloni on health metrics, infectious disease analytics, R programming, data science, and data visualization."
 listing:
   contents: posts/hmsid/index.qmd
   sort: "date desc"
@@ -14,4 +14,4 @@ page-navigation: true
 back-to-top-navigation: true
 ---
 
-
+This books section presents authored work by Federica Gazzelloni on health metrics, infectious disease analytics, R programming, data science, and data visualization. It gives readers a structured path from the website's articles and tutorials into longer-form technical resources.

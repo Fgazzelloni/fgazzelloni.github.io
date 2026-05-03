@@ -5,8 +5,8 @@
 <meta name="generator" content="quarto-1.8.27">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="dcterms.date" content="2024-02-26">
-<meta name="description" content="R tutorial comparing linear model predictions from lm and predict with ggplot2 geom_smooth using historical cholera data.">
-<title>How does geom_smooth() make predictions – Federica Gazzelloni</title>
+<meta name="description" content="R tutorial comparing ggplot2 geom_smooth predictions with lm and predict using historical cholera deaths data.">
+<title>How geom_smooth Makes Linear Model Predictions in R – Federica Gazzelloni</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,15 +152,15 @@ window.Quarto = {
   typesetMath
 };
 </script><link rel="stylesheet" href="../../../../../../styles.css">
-<meta property="og:title" content="How does geom_smooth() make predictions – Federica Gazzelloni">
-<meta property="og:description" content="R tutorial comparing linear model predictions from lm and predict with ggplot2 geom_smooth using historical cholera data.">
+<meta property="og:title" content="How geom_smooth Makes Linear Model Predictions in R – Federica Gazzelloni">
+<meta property="og:description" content="R tutorial comparing ggplot2 geom_smooth predictions with lm and predict using historical cholera deaths data.">
 <meta property="og:image" content="https://federicagazzelloni.com/content/blog/posts/stats/posts/linear_prediction/featured.png">
 <meta property="og:site_name" content="Federica Gazzelloni">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="1500">
 <meta property="og:image:width" content="2100">
-<meta name="twitter:title" content="How does geom_smooth() make predictions – Federica Gazzelloni">
-<meta name="twitter:description" content="R tutorial comparing linear model predictions from lm and predict with ggplot2 geom_smooth using historical cholera data.">
+<meta name="twitter:title" content="How geom_smooth Makes Linear Model Predictions in R – Federica Gazzelloni">
+<meta name="twitter:description" content="R tutorial comparing ggplot2 geom_smooth predictions with lm and predict using historical cholera deaths data.">
 <meta name="twitter:image" content="https://federicagazzelloni.com/content/blog/posts/stats/posts/linear_prediction/featured.png">
 <meta name="twitter:creator" content="@fgazzelloni">
 <meta name="twitter:image-height" content="1500">
@@ -215,7 +215,7 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-packages">
 <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/index.html">
- <span class="dropdown-text">R Packages</span></a>
+ <span class="dropdown-text">R Packages for Health Metrics, Data Visualization, and Teaching</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/posts/oregonfrogs/index.html">
@@ -238,7 +238,7 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-books">
 <li>
     <a class="dropdown-item" href="../../../../../../content/books/index.html">
- <span class="dropdown-text">Books Writing</span></a>
+ <span class="dropdown-text">Books on Health Metrics, R, and Data Science</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/books/posts/hmsid/index.html">
@@ -257,7 +257,7 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">
 <li>
     <a class="dropdown-item" href="../../../../../../content/proj/index.html">
- <span class="dropdown-text">Projects Overview</span></a>
+ <span class="dropdown-text">Projects in AI Automation and Performance Metrics</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/proj/posts/performance_metrics/index.html">
@@ -299,7 +299,7 @@ window.Quarto = {
     
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">How does geom_smooth() make predictions</h1>
+<h1 class="title">How geom_smooth Makes Linear Model Predictions in R</h1>
   <div class="quarto-categories">
     <div class="quarto-category">rstats</div>
     <div class="quarto-category">modeling</div>
@@ -310,7 +310,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    R tutorial comparing linear model predictions from lm and predict with ggplot2 geom_smooth using historical cholera data.
+    R tutorial comparing ggplot2 geom_smooth predictions with lm and predict using historical cholera deaths data.
   </div>
 </div>
 
@@ -333,6 +333,7 @@ window.Quarto = {
 </header><section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <div class="columns">
 <div class="column" style="width:80%;">
+<p>This tutorial explains how <code><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">ggplot2::geom_smooth()</a></code> makes linear model predictions in R. It compares the smoothed line from <code>geom_smooth(method = "lm")</code> with explicit <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> and <code><a href="https://rdrr.io/r/stats/predict.html">predict()</a></code> output using historical cholera deaths data.</p>
 <p><strong>Linear regression</strong> is a statistical technique used to represent the linear relationship between a response <span class="math inline">\((y)\)</span> and a predictor <span class="math inline">\((x)\)</span>.</p>
 <p><span class="math display">\[
 y= \beta_0 + \beta_1x

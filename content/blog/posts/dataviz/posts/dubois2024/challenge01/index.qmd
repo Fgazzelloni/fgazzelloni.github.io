@@ -1,6 +1,6 @@
 ---
-title: '#DuboisChallenge2024 Challenge 01'
-description: "Du Bois Challenge 2024 data visualization in R, comparing the original plate with a recreated chart workflow."
+title: 'Du Bois Challenge 2024 Data Visualization in R'
+description: "R data visualization workflow for Du Bois Challenge 2024, recreating a historical data portrait with sf, patchwork, and tidyverse."
 excerpt: ""
 date: 2024-02-05
 draft: false
@@ -13,6 +13,8 @@ execute:
 ---
 
 ## Overview
+
+This page documents a Du Bois Challenge 2024 data visualization workflow in R. It compares the historical data portrait with a recreated chart and shows how `{sf}`, `{patchwork}`, and tidyverse tools can support a reproducible recreation.
 
 My contributions to the #DuboisChallenge2024.
 

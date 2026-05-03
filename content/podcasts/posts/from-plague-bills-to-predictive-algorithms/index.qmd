@@ -1,6 +1,6 @@
 ---
 title: "From Plague Bills To Predictive Algorithms"
-description: "Podcast episode tracing health intelligence from historical death records to DALYs and predictive algorithms for outbreaks."
+description: "Podcast episode tracing health intelligence from John Graunt's Bills of Mortality to DALYs, machine learning, and outbreak prediction."
 date: '2026-02-08'
 image: featured.png
 slug: podcast-from-plague-bills-to-predictive-algorithms
@@ -21,6 +21,8 @@ execute:
 
 ## Episode Overview
 
+This podcast episode traces health intelligence from historical death records to modern predictive algorithms. It links John Graunt's Bills of Mortality with burden-of-disease metrics, DALYs, machine learning, and outbreak forecasting.
+
 <p><strong>From death records to predictive algorithms.</strong></p><p>This episode traces 400 years of health intelligence—from counting who died to forecasting what comes next.</p><p>We move from John Graunt’s 17th-century Bills of Mortality, through modern burden-of-disease metrics like DALYs, to today’s machine-learning models that learn from data to anticipate outbreaks and inform prevention.</p>
 
 
@@ -29,4 +31,3 @@ execute:
 - Data-driven insights
 - Health metrics analysis
 - Innovative approaches to public health
-

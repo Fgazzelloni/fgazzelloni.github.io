@@ -1,6 +1,6 @@
 ---
-title: "Podcasts"
-description: "A collection of podcasts featuring discussions on data science, technology, and related topics."
+title: "Podcasts on Health Metrics, Data Science, and AI Analytics"
+description: "Podcast episodes by Federica Gazzelloni on health metrics, infectious disease analytics, data science, AI, and public health modelling."
 listing:
   contents: posts
   sort: "date desc"
@@ -13,3 +13,5 @@ title-block-banner: true
 page-navigation: true
 back-to-top-navigation: true
 ---
+
+This podcast section collects episodes on health metrics, infectious disease analytics, data science, AI, and public health modelling. The episodes translate technical ideas such as DALYs, predictive algorithms, spatial analysis, and disease burden into accessible conversations for analysts, students, and applied researchers.

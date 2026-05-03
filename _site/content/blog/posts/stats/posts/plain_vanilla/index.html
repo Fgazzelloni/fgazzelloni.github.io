@@ -5,8 +5,8 @@
 <meta name="generator" content="quarto-1.8.27">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="dcterms.date" content="2024-06-28">
-<meta name="description" content="Artificial neural network tutorial in R explaining a plain vanilla model, activation functions, weights, and backpropagation.">
-<title>Understanding Plain Vanilla - from Scratch – Federica Gazzelloni</title>
+<meta name="description" content="R tutorial building a plain vanilla neural network from scratch, with activation functions, weights, backpropagation, and synthetic data.">
+<title>Plain Vanilla Neural Network from Scratch in R – Federica Gazzelloni</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,15 +152,15 @@ window.Quarto = {
   typesetMath
 };
 </script><link rel="stylesheet" href="../../../../../../styles.css">
-<meta property="og:title" content="Understanding Plain Vanilla - from Scratch – Federica Gazzelloni">
-<meta property="og:description" content="Artificial neural network tutorial in R explaining a plain vanilla model, activation functions, weights, and backpropagation.">
+<meta property="og:title" content="Plain Vanilla Neural Network from Scratch in R – Federica Gazzelloni">
+<meta property="og:description" content="R tutorial building a plain vanilla neural network from scratch, with activation functions, weights, backpropagation, and synthetic data.">
 <meta property="og:image" content="https://federicagazzelloni.com/content/blog/posts/stats/posts/plain_vanilla/featured.png">
 <meta property="og:site_name" content="Federica Gazzelloni">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="980">
 <meta property="og:image:width" content="1362">
-<meta name="twitter:title" content="Understanding Plain Vanilla - from Scratch – Federica Gazzelloni">
-<meta name="twitter:description" content="Artificial neural network tutorial in R explaining a plain vanilla model, activation functions, weights, and backpropagation.">
+<meta name="twitter:title" content="Plain Vanilla Neural Network from Scratch in R – Federica Gazzelloni">
+<meta name="twitter:description" content="R tutorial building a plain vanilla neural network from scratch, with activation functions, weights, backpropagation, and synthetic data.">
 <meta name="twitter:image" content="https://federicagazzelloni.com/content/blog/posts/stats/posts/plain_vanilla/featured.png">
 <meta name="twitter:creator" content="@fgazzelloni">
 <meta name="twitter:image-height" content="980">
@@ -215,7 +215,7 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-packages">
 <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/index.html">
- <span class="dropdown-text">R Packages</span></a>
+ <span class="dropdown-text">R Packages for Health Metrics, Data Visualization, and Teaching</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/posts/oregonfrogs/index.html">
@@ -238,7 +238,7 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-books">
 <li>
     <a class="dropdown-item" href="../../../../../../content/books/index.html">
- <span class="dropdown-text">Books Writing</span></a>
+ <span class="dropdown-text">Books on Health Metrics, R, and Data Science</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/books/posts/hmsid/index.html">
@@ -257,7 +257,7 @@ window.Quarto = {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">
 <li>
     <a class="dropdown-item" href="../../../../../../content/proj/index.html">
- <span class="dropdown-text">Projects Overview</span></a>
+ <span class="dropdown-text">Projects in AI Automation and Performance Metrics</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/proj/posts/performance_metrics/index.html">
@@ -305,7 +305,7 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Understanding Plain Vanilla - from Scratch</h1>
+<h1 class="title">Plain Vanilla Neural Network from Scratch in R</h1>
   <div class="quarto-categories">
     <div class="quarto-category">rstats</div>
     <div class="quarto-category">modeling</div>
@@ -316,7 +316,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Artificial neural network tutorial in R explaining a plain vanilla model, activation functions, weights, and backpropagation.
+    R tutorial building a plain vanilla neural network from scratch, with activation functions, weights, backpropagation, and synthetic data.
   </div>
 </div>
 
@@ -337,6 +337,7 @@ window.Quarto = {
 
 
 </header><section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This tutorial builds a plain vanilla neural network from scratch in R. It is aimed at readers who want to understand the mechanics of artificial neural networks before relying on high-level libraries, including activation functions, weights, synthetic data, and backpropagation.</p>
 <p>In the world of artificial intelligence, understanding the fundamentals of neural networks is essential. One of the simplest yet powerful architectures is the <strong>Artificial Neural Network (ANN) with a single hidden layer, often referred to as a “plain vanilla” network</strong>. This blog post aims to provide a comprehensive guide to building such a network from scratch, focusing on key concepts like activation functions, weights, and the backpropagation algorithm outside the library boxes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="featured.png" class="img-fluid figure-img"></p>

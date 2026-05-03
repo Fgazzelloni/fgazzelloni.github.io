@@ -1,6 +1,6 @@
 ---
-title: "Health Index"
-description: "Health index project using IHME Global Burden of Disease life expectancy data, R workflows, and population health indicators."
+title: "Health Index with IHME Life Expectancy Data in R"
+description: "R project building a health index from IHME Global Burden of Disease life expectancy data and population health indicators."
 excerpt: "Machine learning models"
 date: 2025-11-01
 images:
@@ -21,6 +21,8 @@ execute:
 
 :::: columns
 ::: {.column width="60%"}
+This project builds a health index in R using life expectancy data from the IHME Global Burden of Disease study. The aim is to turn population health indicators into a clearer comparative measure that can support health metrics analysis and reproducible public health workflows.
+
 Process of building an index to show the dimension of health with an index. Data used is the life expectancy at birth data from the IHME GBD 2021 **Global Burden of Disease Study 2021 (GBD 2021) Mortality and Life Expectancy Forecasts 2022-2050** dataset.
 :::
 

@@ -1,6 +1,6 @@
 ---
-title: 'Oregon spotted a frog: Rana Pretiosa'
-description: "R package and mlr3 workflow for Oregon spotted frog data, classification, regression, and machine learning practice."
+title: 'Oregon Spotted Frog R Package with mlr3 Machine Learning'
+description: "R package tutorial using Oregon spotted frog data with mlr3 classification, regression, spatial features, and machine learning practice."
 date: 2022-10-30
 excerpt: Machine Learning with mlr3
 images: 
@@ -19,10 +19,12 @@ execute:
 
 #### Updated June 2023
 
-# Overview
+## Overview
 
 ::::: columns
 ::: {.column width="80%"}
+This page introduces the `{oregonfrogs}` R package and shows how Oregon spotted frog survey data can be used for machine learning practice in R. The workflow focuses on classification, regression, coordinate handling, and model experimentation with the `{mlr3}` ecosystem.
+
 I made a package! Looking for data to use for one of my data visualization I stomped into this data about frogs in Oregon (US) and realized that it was very interesting for making both classification and regression models. So, I wrapped the data into a package, and even if it is still a work in progress I started using it for practicing **machine learning** algorithms.
 
 More info about it will follow. For now this project is all about how to use `{mlr3}` package for analysing and predicting data. **mlr3** is a machine learning **ecosystem**, it provides a unified interface to use different machine learning models in R.

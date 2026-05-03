@@ -1,6 +1,6 @@
 ---
 title: "R-Ladies Events Stats"
-description: "Text analysis of R-Ladies Meetup event data in R, including chapter event collection and word cloud visualization."
+description: "R text analysis tutorial using R-Ladies Meetup event data, meetupr, tidytext, topic modelling, and word cloud visualization."
 excerpt: "Statistics"
 date: 2024-03-12
 draft: false
@@ -17,6 +17,8 @@ execute:
 
 ::: columns
 ::: {.column width="80%"}
+This tutorial shows how to collect and analyze R-Ladies Meetup event data in R. It uses `{meetupr}`, tidy text methods, topic modelling, and word cloud visualization to explore chapter activity and event language across the R-Ladies community.
+
 Let's scrap the R-Ladies chapters events from Meetup.com We can use the `{meetupr}` package.
 
 ```         
