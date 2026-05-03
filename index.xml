@@ -8,7 +8,7 @@
 <title>Federica Gazzelloni</title>
 <link>https://federicagazzelloni.com/</link>
 <atom:link href="https://federicagazzelloni.com/index.xml" rel="self" type="application/rss+xml"/>
-<description>Data Science Portfolio</description>
+<description>Federica Gazzelloni&#39;s data science hub for R, Python, health metrics, infectious disease analytics, data visualization, books, podcasts, and projects.</description>
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Mon, 30 Mar 2026 22:00:00 GMT</lastBuildDate>
 <item>
@@ -289,58 +289,6 @@ font-style: inherit;">-czf</span> n8n_backup.tar.gz ~/n8n_data</span></code></pr
   <pubDate>Mon, 30 Mar 2026 22:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Understanding Risk Assessments</title>
-  <link>https://federicagazzelloni.com/content/blog/posts/actuarial/posts/riskassessments/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Risk assessments are at the core of actuarial science, providing the foundation for informed decision-making in uncertain environments. This post explores the key concepts, methodologies, and applications of risk assessments.</p>
-<section id="what-is-risk-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-risk-assessment">What is Risk Assessment?</h3>
-<p>Risk assessment involves identifying, analyzing, and evaluating potential risks that could impact an organization or project. By quantifying these risks, actuaries and decision-makers can develop strategies to mitigate or manage them effectively.</p>
-</section>
-<section id="key-components-of-risk-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="key-components-of-risk-assessment">Key Components of Risk Assessment</h3>
-<ol type="1">
-<li><strong>Risk Identification</strong>: Recognizing potential risks and their sources.</li>
-<li><strong>Risk Analysis</strong>: Measuring the likelihood and impact of each risk.</li>
-<li><strong>Risk Evaluation</strong>: Prioritizing risks based on their significance.</li>
-<li><strong>Risk Mitigation</strong>: Developing strategies to reduce or eliminate risks.</li>
-</ol>
-</section>
-<section id="tools-and-techniques" class="level3">
-<h3 class="anchored" data-anchor-id="tools-and-techniques">Tools and Techniques</h3>
-<ul>
-<li><strong>Probability Models</strong>: Using statistical methods to estimate the likelihood of events.</li>
-<li><strong>Scenario Analysis</strong>: Exploring different outcomes based on varying assumptions.</li>
-<li><strong>Stress Testing</strong>: Assessing the impact of extreme scenarios on financial stability.</li>
-</ul>
-</section>
-<section id="real-world-applications" class="level3">
-<h3 class="anchored" data-anchor-id="real-world-applications">Real-World Applications</h3>
-<ul>
-<li><strong>Insurance</strong>: Calculating premiums and reserves based on risk profiles.</li>
-<li><strong>Finance</strong>: Evaluating investment risks and portfolio performance.</li>
-<li><strong>Healthcare</strong>: Assessing risks in patient care and medical treatments.</li>
-</ul>
-</section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>Risk assessments are essential for navigating uncertainty and making data-driven decisions. By leveraging actuarial science principles, organizations can better prepare for potential challenges and seize opportunities with confidence.</p>
-<p>Stay tuned for more insights on risk management and related topics. Feel free to share your thoughts or questions in the comments!</p>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>Risk Management</category>
-  <category>Decision Making</category>
-  <guid>https://federicagazzelloni.com/content/blog/posts/actuarial/posts/riskassessments/</guid>
-  <pubDate>Wed, 04 Mar 2026 23:00:00 GMT</pubDate>
-</item>
-<item>
   <title>The Actuarial Executive Career Roadmap</title>
   <link>https://federicagazzelloni.com/content/blog/posts/actuarial/posts/career-roadmap/</link>
   <description><![CDATA[ 
@@ -464,6 +412,58 @@ font-style: inherit;">-czf</span> n8n_backup.tar.gz ~/n8n_data</span></code></pr
   <pubDate>Wed, 04 Mar 2026 23:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Understanding Risk Assessments</title>
+  <link>https://federicagazzelloni.com/content/blog/posts/actuarial/posts/riskassessments/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Risk assessments are at the core of actuarial science, providing the foundation for informed decision-making in uncertain environments. This post explores the key concepts, methodologies, and applications of risk assessments.</p>
+<section id="what-is-risk-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-risk-assessment">What is Risk Assessment?</h3>
+<p>Risk assessment involves identifying, analyzing, and evaluating potential risks that could impact an organization or project. By quantifying these risks, actuaries and decision-makers can develop strategies to mitigate or manage them effectively.</p>
+</section>
+<section id="key-components-of-risk-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="key-components-of-risk-assessment">Key Components of Risk Assessment</h3>
+<ol type="1">
+<li><strong>Risk Identification</strong>: Recognizing potential risks and their sources.</li>
+<li><strong>Risk Analysis</strong>: Measuring the likelihood and impact of each risk.</li>
+<li><strong>Risk Evaluation</strong>: Prioritizing risks based on their significance.</li>
+<li><strong>Risk Mitigation</strong>: Developing strategies to reduce or eliminate risks.</li>
+</ol>
+</section>
+<section id="tools-and-techniques" class="level3">
+<h3 class="anchored" data-anchor-id="tools-and-techniques">Tools and Techniques</h3>
+<ul>
+<li><strong>Probability Models</strong>: Using statistical methods to estimate the likelihood of events.</li>
+<li><strong>Scenario Analysis</strong>: Exploring different outcomes based on varying assumptions.</li>
+<li><strong>Stress Testing</strong>: Assessing the impact of extreme scenarios on financial stability.</li>
+</ul>
+</section>
+<section id="real-world-applications" class="level3">
+<h3 class="anchored" data-anchor-id="real-world-applications">Real-World Applications</h3>
+<ul>
+<li><strong>Insurance</strong>: Calculating premiums and reserves based on risk profiles.</li>
+<li><strong>Finance</strong>: Evaluating investment risks and portfolio performance.</li>
+<li><strong>Healthcare</strong>: Assessing risks in patient care and medical treatments.</li>
+</ul>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>Risk assessments are essential for navigating uncertainty and making data-driven decisions. By leveraging actuarial science principles, organizations can better prepare for potential challenges and seize opportunities with confidence.</p>
+<p>Stay tuned for more insights on risk management and related topics. Feel free to share your thoughts or questions in the comments!</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Risk Management</category>
+  <category>Decision Making</category>
+  <guid>https://federicagazzelloni.com/content/blog/posts/actuarial/posts/riskassessments/</guid>
+  <pubDate>Wed, 04 Mar 2026 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>The Accounting of Human Suffering</title>
   <link>https://federicagazzelloni.com/content/podcasts/posts/the-accounting-of-human-suffering/</link>
   <description><![CDATA[ 
@@ -540,6 +540,40 @@ Life expectancies, simulated data and health metrics in a fascinating discussion
   <media:content url="https://federicagazzelloni.com/content/podcasts/posts/valuing-human-life-in-a-spreadsheet/featured.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
+  <title>Bills of Mortality to AI</title>
+  <link>https://federicagazzelloni.com/content/podcasts/posts/bills-of-mortality-to-ai/</link>
+  <description><![CDATA[ 
+
+
+
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/43CSCODQFQkZ05u3Up5OD6/video?utm_source=generator" width="624" height="351" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+</iframe>
+<section id="episode-overview" class="level2">
+<h2 class="anchored" data-anchor-id="episode-overview">Episode Overview</h2>
+<p>
+<strong>17th Century: The Bills of Mortality.</strong> John Graunt, the “father of demography,” uses London’s weekly death records to identify the first statistical patterns in human longevity and disease.
+</p>
+</section>
+<section id="key-topics-discussed" class="level2">
+<h2 class="anchored" data-anchor-id="key-topics-discussed">Key Topics Discussed</h2>
+<ul>
+<li>Data-driven insights</li>
+<li>Health metrics analysis</li>
+<li>Innovative approaches to public health</li>
+</ul>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>health metrics</category>
+  <category>data science</category>
+  <guid>https://federicagazzelloni.com/content/podcasts/posts/bills-of-mortality-to-ai/</guid>
+  <pubDate>Sat, 07 Feb 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://federicagazzelloni.com/content/podcasts/posts/bills-of-mortality-to-ai/featured.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
   <title>From Plague Bills To Predictive Algorithms</title>
   <link>https://federicagazzelloni.com/content/podcasts/posts/from-plague-bills-to-predictive-algorithms/</link>
   <description><![CDATA[ 
@@ -578,40 +612,6 @@ We move from John Graunt’s 17th-century Bills of Mortality, through modern bur
   <guid>https://federicagazzelloni.com/content/podcasts/posts/from-plague-bills-to-predictive-algorithms/</guid>
   <pubDate>Sat, 07 Feb 2026 23:00:00 GMT</pubDate>
   <media:content url="https://federicagazzelloni.com/content/podcasts/posts/from-plague-bills-to-predictive-algorithms/featured.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Bills of Mortality to AI</title>
-  <link>https://federicagazzelloni.com/content/podcasts/posts/bills-of-mortality-to-ai/</link>
-  <description><![CDATA[ 
-
-
-
-
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/43CSCODQFQkZ05u3Up5OD6/video?utm_source=generator" width="624" height="351" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-</iframe>
-<section id="episode-overview" class="level2">
-<h2 class="anchored" data-anchor-id="episode-overview">Episode Overview</h2>
-<p>
-<strong>17th Century: The Bills of Mortality.</strong> John Graunt, the “father of demography,” uses London’s weekly death records to identify the first statistical patterns in human longevity and disease.
-</p>
-</section>
-<section id="key-topics-discussed" class="level2">
-<h2 class="anchored" data-anchor-id="key-topics-discussed">Key Topics Discussed</h2>
-<ul>
-<li>Data-driven insights</li>
-<li>Health metrics analysis</li>
-<li>Innovative approaches to public health</li>
-</ul>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>health metrics</category>
-  <category>data science</category>
-  <guid>https://federicagazzelloni.com/content/podcasts/posts/bills-of-mortality-to-ai/</guid>
-  <pubDate>Sat, 07 Feb 2026 23:00:00 GMT</pubDate>
-  <media:content url="https://federicagazzelloni.com/content/podcasts/posts/bills-of-mortality-to-ai/featured.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Announcing {typeR}: simulate live typing of R scripts</title>
@@ -2682,7 +2682,7 @@ font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
-<div id="fig-le" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Regions' le">
+<div id="fig-le" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Regions' le" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-le-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://federicagazzelloni.com/content/books/posts/hmsid/posts/062025/images/le.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Regions' le">
 </div>
