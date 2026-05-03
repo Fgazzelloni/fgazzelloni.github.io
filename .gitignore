@@ -3,7 +3,7 @@
 .RData
 .Ruserdata
 _extensions
-
+seo-folder
 /.quarto/
 **/*.quarto_ipynb
 .httr-oauth
