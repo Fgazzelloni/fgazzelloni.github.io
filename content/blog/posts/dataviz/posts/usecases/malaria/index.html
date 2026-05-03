@@ -5,8 +5,8 @@
 <meta name="generator" content="quarto-1.8.27">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="dcterms.date" content="2023-08-27">
-<meta name="description" content="Public health data analysis of malaria cases using R, WHO and World Bank data, maps, and epidemic context.">
-<title>The case of Malaria – Federica Gazzelloni</title>
+<meta name="description" content="Public health data analysis of malaria in R using WHO malaria map data, World Bank indicators, epidemic context, and visualization.">
+<title>Malaria Data Analysis in R with WHO and World Bank Data – Federica Gazzelloni</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,15 +127,15 @@ cookieconsent.run({
 });
 </script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="stylesheet" href="../../../../../../../styles.css">
-<meta property="og:title" content="The case of Malaria – Federica Gazzelloni">
-<meta property="og:description" content="Public health data analysis of malaria cases using R, WHO and World Bank data, maps, and epidemic context.">
+<meta property="og:title" content="Malaria Data Analysis in R with WHO and World Bank Data – Federica Gazzelloni">
+<meta property="og:description" content="Public health data analysis of malaria in R using WHO malaria map data, World Bank indicators, epidemic context, and visualization.">
 <meta property="og:image" content="https://federicagazzelloni.com/content/blog/posts/dataviz/posts/usecases/malaria/featured.png">
 <meta property="og:site_name" content="Federica Gazzelloni">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="1500">
 <meta property="og:image:width" content="2100">
-<meta name="twitter:title" content="The case of Malaria – Federica Gazzelloni">
-<meta name="twitter:description" content="Public health data analysis of malaria cases using R, WHO and World Bank data, maps, and epidemic context.">
+<meta name="twitter:title" content="Malaria Data Analysis in R with WHO and World Bank Data – Federica Gazzelloni">
+<meta name="twitter:description" content="Public health data analysis of malaria in R using WHO malaria map data, World Bank indicators, epidemic context, and visualization.">
 <meta name="twitter:image" content="https://federicagazzelloni.com/content/blog/posts/dataviz/posts/usecases/malaria/featured.png">
 <meta name="twitter:creator" content="@fgazzelloni">
 <meta name="twitter:image-height" content="1500">
@@ -190,7 +190,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-packages">
 <li>
     <a class="dropdown-item" href="../../../../../../../content/rpackages/index.html">
- <span class="dropdown-text">R Packages</span></a>
+ <span class="dropdown-text">R Packages for Health Metrics, Data Visualization, and Teaching</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../../content/rpackages/posts/oregonfrogs/index.html">
@@ -213,7 +213,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-books">
 <li>
     <a class="dropdown-item" href="../../../../../../../content/books/index.html">
- <span class="dropdown-text">Books Writing</span></a>
+ <span class="dropdown-text">Books on Health Metrics, R, and Data Science</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../../content/books/posts/hmsid/index.html">
@@ -232,7 +232,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">
 <li>
     <a class="dropdown-item" href="../../../../../../../content/proj/index.html">
- <span class="dropdown-text">Projects Overview</span></a>
+ <span class="dropdown-text">Projects in AI Automation and Performance Metrics</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../../content/proj/posts/performance_metrics/index.html">
@@ -274,12 +274,12 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">The case of Malaria</h1>
+<h1 class="title">Malaria Data Analysis in R with WHO and World Bank Data</h1>
 </div>
 
 <div>
   <div class="description">
-    Public health data analysis of malaria cases using R, WHO and World Bank data, maps, and epidemic context.
+    Public health data analysis of malaria in R using WHO malaria map data, World Bank indicators, epidemic context, and visualization.
   </div>
 </div>
 
@@ -300,6 +300,7 @@ cookieconsent.run({
 
 
 </header><section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This post explores malaria data analysis in R using WHO malaria map data, World Bank indicators, and public health context. It focuses on how data visualization and exploratory analysis can help interpret malaria risk, mosquito information, and locally acquired cases.</p>
 <blockquote class="blockquote">
 <p>August 18, 2023 “A case of locally acquired #malaria has been confirmed in Maryland, Washington, D.C., area. Nine cases have been reported this summer in Florida and Texas, the first in the US in 20 years, according to the US Centers for Disease Control and Prevention. #epidemics” <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 </blockquote>

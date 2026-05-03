@@ -5,8 +5,8 @@
 <meta name="generator" content="quarto-1.8.27">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="dcterms.date" content="2022-07-12">
-<meta name="description" content="R data visualization of European flights and airports using TidyTuesday data, Sankey-style thinking, and data wrangling.">
-<title>European flights – Federica Gazzelloni</title>
+<meta name="description" content="R tutorial visualizing European flights and airports with TidyTuesday data, Sankey-style thinking, waffle charts, and data wrangling.">
+<title>European Flights Data Visualization in R – Federica Gazzelloni</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,15 +127,15 @@ cookieconsent.run({
 });
 </script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="stylesheet" href="../../../../../../styles.css">
-<meta property="og:title" content="European flights – Federica Gazzelloni">
-<meta property="og:description" content="R data visualization of European flights and airports using TidyTuesday data, Sankey-style thinking, and data wrangling.">
+<meta property="og:title" content="European Flights Data Visualization in R – Federica Gazzelloni">
+<meta property="og:description" content="R tutorial visualizing European flights and airports with TidyTuesday data, Sankey-style thinking, waffle charts, and data wrangling.">
 <meta property="og:image" content="https://federicagazzelloni.com/content/blog/posts/dataviz/posts/european_flights/featured.png">
 <meta property="og:site_name" content="Federica Gazzelloni">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="2304">
 <meta property="og:image:width" content="2239">
-<meta name="twitter:title" content="European flights – Federica Gazzelloni">
-<meta name="twitter:description" content="R data visualization of European flights and airports using TidyTuesday data, Sankey-style thinking, and data wrangling.">
+<meta name="twitter:title" content="European Flights Data Visualization in R – Federica Gazzelloni">
+<meta name="twitter:description" content="R tutorial visualizing European flights and airports with TidyTuesday data, Sankey-style thinking, waffle charts, and data wrangling.">
 <meta name="twitter:image" content="https://federicagazzelloni.com/content/blog/posts/dataviz/posts/european_flights/featured.png">
 <meta name="twitter:creator" content="@fgazzelloni">
 <meta name="twitter:image-height" content="2304">
@@ -190,7 +190,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-packages">
 <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/index.html">
- <span class="dropdown-text">R Packages</span></a>
+ <span class="dropdown-text">R Packages for Health Metrics, Data Visualization, and Teaching</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/posts/oregonfrogs/index.html">
@@ -213,7 +213,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-books">
 <li>
     <a class="dropdown-item" href="../../../../../../content/books/index.html">
- <span class="dropdown-text">Books Writing</span></a>
+ <span class="dropdown-text">Books on Health Metrics, R, and Data Science</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/books/posts/hmsid/index.html">
@@ -232,7 +232,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">
 <li>
     <a class="dropdown-item" href="../../../../../../content/proj/index.html">
- <span class="dropdown-text">Projects Overview</span></a>
+ <span class="dropdown-text">Projects in AI Automation and Performance Metrics</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/proj/posts/performance_metrics/index.html">
@@ -274,12 +274,12 @@ cookieconsent.run({
     
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">European flights</h1>
+<h1 class="title">European Flights Data Visualization in R</h1>
 </div>
 
 <div>
   <div class="description">
-    R data visualization of European flights and airports using TidyTuesday data, Sankey-style thinking, and data wrangling.
+    R tutorial visualizing European flights and airports with TidyTuesday data, Sankey-style thinking, waffle charts, and data wrangling.
   </div>
 </div>
 
@@ -300,6 +300,7 @@ cookieconsent.run({
 
 
 </header><section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This tutorial visualizes European flights and airports in R using TidyTuesday data. It compares countries by airport counts and flight activity, then develops a Sankey-style visualization workflow with data wrangling and supporting chart choices.</p>
 <p>This #TidyTuesday week 28 is all about <strong>European flights</strong>. I was looking for a visualization that would represent the differences among countries in terms of the number of airports versus number of flights. I looked on the internet for getting some inspiration and then landed on Pintarest, where I found exactly what I was hoping for: a Sankey! First of all, <strong>What is a Sankey?</strong> The answer is clearer after you make one of your own. In short, it is a network graph connecting diffent groups with a ribbon. A few things that made me think about a lot were the requirements for the type of data to combine, the consequent label results, and the grouping.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="featured.png" class="img-fluid figure-img"></p>

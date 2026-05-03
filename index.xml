@@ -8,7 +8,7 @@
 <title>Federica Gazzelloni</title>
 <link>https://federicagazzelloni.com/</link>
 <atom:link href="https://federicagazzelloni.com/index.xml" rel="self" type="application/rss+xml"/>
-<description>Federica Gazzelloni&#39;s data science hub for R, Python, health metrics, infectious disease analytics, data visualization, books, podcasts, and projects.</description>
+<description>Federica Gazzelloni shares health metrics, infectious disease analytics, R workflows, AI automation, actuarial science, books, podcasts, and teaching resources.</description>
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Mon, 30 Mar 2026 22:00:00 GMT</lastBuildDate>
 <item>
@@ -25,6 +25,7 @@
 <div class="column" style="width:60%;">
 <section id="why-build-a-personal-automation-system" class="level3">
 <h3 class="anchored" data-anchor-id="why-build-a-personal-automation-system">Why build a personal automation system?</h3>
+<p>This guide explains how to build a first personal automation assistant with n8n, Oracle Cloud Free Tier, Ubuntu, and Docker. It is written for analysts and creators who want a low-cost foundation for RSS monitoring, daily briefings, AI summaries, and repeatable research workflows.</p>
 <p>Many people start exploring AI and automation by trying tools individually. They test a chatbot. They try an API. They read about agents.</p>
 <p>But what really changes productivity is not a single tool. It is building a <strong>small system</strong> that works for you every day.</p>
 </section>
@@ -585,6 +586,7 @@ Life expectancies, simulated data and health metrics in a fascinating discussion
 </iframe>
 <section id="episode-overview" class="level2">
 <h2 class="anchored" data-anchor-id="episode-overview">Episode Overview</h2>
+<p>This podcast episode traces health intelligence from historical death records to modern predictive algorithms. It links John Graunt’s Bills of Mortality with burden-of-disease metrics, DALYs, machine learning, and outbreak forecasting.</p>
 <p>
 <strong>From death records to predictive algorithms.</strong>
 </p>
@@ -779,6 +781,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This article explains core health metrics concepts from the book <em>Health Metrics and the Spread of Infectious Diseases</em>. It focuses on DALYs, risk exposure, epidemic prediction, AI models, and spatial public health analysis for readers who want a clearer view of how data science measures population health.</p>
 <p><strong>How do we measure the health of a nation?</strong> The first number that often comes to mind is life expectancy. Japan, for example, boasts one of the world’s highest, suggesting a simple story of success. Yet, this single figure can be misleading. A long life is not the same as a healthy life, and the story of our collective well-being is far more complex than one metric can capture.</p>
 <p>Beneath the surface of headlines and familiar statistics, a sophisticated set of metrics and models gives us a much truer picture of public health. This isn’t just about how long we live, but how well we live, what truly puts us at risk, and where our health is most vulnerable. The science of health metrics moves beyond simple averages to quantify the true burden of disease.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -867,6 +870,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 </iframe>
 <section id="episode-overview" class="level2">
 <h2 class="anchored" data-anchor-id="episode-overview">Episode Overview</h2>
+<p>This podcast episode explains the new science of fighting infectious disease through health metrics, machine learning, spatial modelling, and One Health thinking. It connects public health measurement with predictive analytics for outbreak detection, disease burden, and prevention.</p>
 <p>
 The <strong>new science of fighting infectious disease</strong> is a multidisciplinary field that integrates <strong>health metrics, machine learning, and spatial modeling</strong> to predict, track, and mitigate the spread of pathogens. Rather than relying solely on traditional medicine, this approach utilizes advanced data science to understand the "invisible enemies" that threaten global health.
 </p>
@@ -921,11 +925,12 @@ Buy your hardcover here: <a href="https://amzn.to/3N7zZjH" target="_blank" rel="
   <media:content url="https://federicagazzelloni.com/content/podcasts/posts/the-new-science-of-fighting-infectious-disease/featured.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>Health Index</title>
+  <title>Health Index with IHME Life Expectancy Data in R</title>
   <link>https://federicagazzelloni.com/content/proj/posts/performance_metrics/posts/health_index/</link>
   <description><![CDATA[ <section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
+<p>This project builds a health index in R using life expectancy data from the IHME Global Burden of Disease study. The aim is to turn population health indicators into a clearer comparative measure that can support health metrics analysis and reproducible public health workflows.</p>
 <p>Process of building an index to show the dimension of health with an index. Data used is the life expectancy at birth data from the IHME GBD 2021 <strong>Global Burden of Disease Study 2021 (GBD 2021) Mortality and Life Expectancy Forecasts 2022-2050</strong> dataset.</p>
 </div><div class="column" style="width:40%;">
 <p><img src="https://federicagazzelloni.com/content/proj/posts/performance_metrics/posts/health_index/featured.png" class="img-fluid"></p>
@@ -2939,9 +2944,10 @@ font-style: inherit;">)</span></span></code></pre></div></div>
   <media:content url="https://federicagazzelloni.com/content/books/posts/hmsid/posts/062025/featured.png" medium="image" type="image/png" height="201" width="144"/>
 </item>
 <item>
-  <title>Understanding Plain Vanilla - from Scratch</title>
+  <title>Plain Vanilla Neural Network from Scratch in R</title>
   <link>https://federicagazzelloni.com/content/blog/posts/stats/posts/plain_vanilla/</link>
   <description><![CDATA[ <section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This tutorial builds a plain vanilla neural network from scratch in R. It is aimed at readers who want to understand the mechanics of artificial neural networks before relying on high-level libraries, including activation functions, weights, synthetic data, and backpropagation.</p>
 <p>In the world of artificial intelligence, understanding the fundamentals of neural networks is essential. One of the simplest yet powerful architectures is the <strong>Artificial Neural Network (ANN) with a single hidden layer, often referred to as a “plain vanilla” network</strong>. This blog post aims to provide a comprehensive guide to building such a network from scratch, focusing on key concepts like activation functions, weights, and the backpropagation algorithm outside the library boxes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="https://federicagazzelloni.com/content/blog/posts/stats/posts/plain_vanilla/featured.png" class="img-fluid figure-img"></p>
@@ -5635,6 +5641,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
   <description><![CDATA[ <section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <div class="columns">
 <div class="column" style="width:80%;">
+<p>This tutorial shows how to collect and analyze R-Ladies Meetup event data in R. It uses <a href="https://rladies.org/meetupr/">meetupr</a>, tidy text methods, topic modelling, and word cloud visualization to explore chapter activity and event language across the R-Ladies community.</p>
 <p>Let’s scrap the R-Ladies chapters events from Meetup.com We can use the <a href="https://rladies.org/meetupr/">meetupr</a> package.</p>
 <pre><code>urlname &lt;- c("rladies-paris","rladies-rome")
 events &lt;- purrr::map(urlname,get_events)
@@ -7240,11 +7247,12 @@ font-style: inherit;">)</span></span></code></pre></div></div>
   <pubDate>Mon, 11 Mar 2024 23:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>How does geom_smooth() make predictions</title>
+  <title>How geom_smooth Makes Linear Model Predictions in R</title>
   <link>https://federicagazzelloni.com/content/blog/posts/stats/posts/linear_prediction/</link>
   <description><![CDATA[ <section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <div class="columns">
 <div class="column" style="width:80%;">
+<p>This tutorial explains how <code><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">ggplot2::geom_smooth()</a></code> makes linear model predictions in R. It compares the smoothed line from <code>geom_smooth(method = "lm")</code> with explicit <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> and <code><a href="https://rdrr.io/r/stats/predict.html">predict()</a></code> output using historical cholera deaths data.</p>
 <p><strong>Linear regression</strong> is a statistical technique used to represent the linear relationship between a response <img src="https://latex.codecogs.com/png.latex?(y)"> and a predictor <img src="https://latex.codecogs.com/png.latex?(x)">.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Ay=%20%5Cbeta_0%20+%20%5Cbeta_1x%0A"></p>
 </div><div class="column" style="width:20%;">
@@ -8614,9 +8622,10 @@ font-style: inherit;">)</span></span></code></pre></div></div>
   <media:content url="https://federicagazzelloni.com/content/blog/posts/stats/posts/linear_prediction/featured.png" medium="image" type="image/png" height="103" width="144"/>
 </item>
 <item>
-  <title>#DuboisChallenge2024 Challenge 01</title>
+  <title>Du Bois Challenge 2024 Data Visualization in R</title>
   <link>https://federicagazzelloni.com/content/blog/posts/dataviz/posts/dubois2024/challenge01/</link>
   <description><![CDATA[ <section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This page documents a Du Bois Challenge 2024 data visualization workflow in R. It compares the historical data portrait with a recreated chart and shows how <a href="https://r-spatial.github.io/sf/">sf</a>, <a href="https://patchwork.data-imaginist.com">patchwork</a>, and tidyverse tools can support a reproducible recreation.</p>
 <p>My contributions to the #DuboisChallenge2024.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
