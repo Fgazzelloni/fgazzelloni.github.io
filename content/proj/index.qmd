@@ -24,6 +24,11 @@ Explore projects and resources focused on **AI automation**, **performance metri
 - **Performance Metrics Analysis**: In-depth studies and findings on performance evaluation.
 - **Innovative Solutions**: Creative approaches to solving complex problems.
 
+### Start with these projects
+
+- [Build a first automation assistant with n8n and Oracle Cloud](posts/automation_workflow/posts/n8n_setup/) for a practical AI-ready workflow foundation.
+- [Health index with IHME life expectancy data](posts/performance_metrics/posts/health_index/) for R-based health metrics and population health indicators.
+
 ### Latest Posts
 
 Below, you'll find the most recent posts from the Projects section, displayed in a grid layout for easy navigation. Click on any post to dive deeper into the details and insights.

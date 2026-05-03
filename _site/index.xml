@@ -619,7 +619,7 @@ We move from John Graunt’s 17th-century Bills of Mortality, through modern bur
   <title>Announcing {typeR}: simulate live typing of R scripts</title>
   <link>https://federicagazzelloni.com/content/rpackages/posts/typeR/</link>
   <description><![CDATA[ <section id="updated-january-2026" class="level4"><h4 class="anchored" data-anchor-id="updated-january-2026">Updated January 2026</h4>
-</section><section id="overview" class="level1"><h1>Overview</h1>
+</section><section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <div class="columns">
 <div class="column" style="width:80%;">
 <p>I’m excited to announce the release of my new R package, <strong>{typeR}</strong>! This tiny utility allows you to simulate live typing of R scripts directly in the console, making it perfect for teaching, live coding demos, and recording videos where you want code to appear progressively.</p>
@@ -635,7 +635,7 @@ We move from John Graunt’s 17th-century Bills of Mortality, through modern bur
 </div>
 </div>
 <p>So I built <strong>{typeR}</strong>: a small utility package that <strong>prints an R script to the console with a typing effect</strong>, character by character, with a configurable delay.</p>
-<section id="what-typer-does" class="level2"><h2 class="anchored" data-anchor-id="what-typer-does">What {typeR} does</h2>
+</section><section id="what-typer-does" class="level2"><h2 class="anchored" data-anchor-id="what-typer-does">What {typeR} does</h2>
 <p>Given a path to an <code>.R</code> file, <code><a href="https://Fgazzelloni.github.io/typeR/reference/typeR.html">typeR()</a></code>:</p>
 <ul>
 <li>reads the file line-by-line</li>
@@ -767,7 +767,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 <p>If you want to contribute, open an issue with a short reproducible example and the expected behaviour.</p>
 
 
-</section></section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+</section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <guid>https://federicagazzelloni.com/content/rpackages/posts/typeR/</guid>
   <pubDate>Thu, 15 Jan 2026 23:00:00 GMT</pubDate>
 </item>
@@ -2700,7 +2700,7 @@ Figure&nbsp;1: Regions’ Life Expectancy Over Time
 <li>No manual image editing</li>
 <li>Fully up-to-date plots on each render</li>
 <li>Transparent modelling steps</li>
-</ul></section><section id="automating-rendering" class="level1"><h1>Automating Rendering</h1>
+</ul></section><section id="automating-rendering" class="level2"><h2 class="anchored" data-anchor-id="automating-rendering">Automating Rendering</h2>
 <p>With dozens of chapters and hundreds of figures, manual rendering was not feasible. I automated it using one command:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
@@ -2759,7 +2759,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
 <p>This guaranteed that everything knitted from scratch.</p>
-<section id="version-control-and-collaboration" class="level2"><h2 class="anchored" data-anchor-id="version-control-and-collaboration">Version Control and Collaboration</h2>
+</section><section id="version-control-and-collaboration" class="level2"><h2 class="anchored" data-anchor-id="version-control-and-collaboration">Version Control and Collaboration</h2>
 <p>Git and GitHub supported the entire project:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
@@ -2937,7 +2937,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 </blockquote>
 
 
-</section></section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+</section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>book</category>
   <guid>https://federicagazzelloni.com/content/books/posts/hmsid/posts/062025/</guid>
   <pubDate>Sun, 22 Jun 2025 22:00:00 GMT</pubDate>
@@ -11303,7 +11303,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 <item>
   <title>Epidemic transition metrics of HIV infections estimation</title>
   <link>https://federicagazzelloni.com/content/blog/posts/dataviz/posts/usecases/hiv/</link>
-  <description><![CDATA[ <section id="overview" class="level1"><h1>Overview</h1>
+  <description><![CDATA[ <section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>HIV infections data is from the <code>aidsinfo.unaids.org</code>. The data contains Global values from 2010 to 2022 for <code>HIV estimate</code>, <code>HIV incidence of mortality</code>, <code>HIV prevalence</code>, and <code>HIV deaths</code>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="https://federicagazzelloni.com/content/blog/posts/dataviz/posts/usecases/hiv/featured.png" class="img-fluid figure-img"></p>
@@ -11380,7 +11380,7 @@ font-style: inherit;">"World"</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
-<section id="hiv-average-values-2010-2020" class="level2"><h2 class="anchored" data-anchor-id="hiv-average-values-2010-2020">HIV average values (2010-2020)</h2>
+</section><section id="hiv-average-values-2010-2020" class="level2"><h2 class="anchored" data-anchor-id="hiv-average-values-2010-2020">HIV average values (2010-2020)</h2>
 <p>This first dataset contains the average values, obtained by averaging the lower and upper bounds of 2010 and 2020 HIV infections for 173 countries.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
@@ -13660,21 +13660,21 @@ font-style: inherit;">)</span> </span></code></pre></div></div>
 </ul>
 
 
-</section></section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+</section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <guid>https://federicagazzelloni.com/content/blog/posts/dataviz/posts/usecases/hiv/</guid>
   <pubDate>Sun, 12 Nov 2023 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>How to get started with ggmap</title>
   <link>https://federicagazzelloni.com/content/blog/posts/dataviz/posts/ggmap/</link>
-  <description><![CDATA[ <section id="overview" class="level1"><h1>Overview</h1>
+  <description><![CDATA[ <section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>For this <code>#30DayMapChallenge 2023 Day6 - Asia</code> let’s explore the Population estimation for Regions and major Cities, from different sources.</p>
 <p>Also, we will be looking at how to get started with <a href="https://github.com/dkahle/ggmap">ggmap</a> to find the <code>geocodes</code> for the major cities in Asia.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="https://federicagazzelloni.com/content/blog/posts/dataviz/posts/ggmap/featured.png" class="img-fluid figure-img"></p>
 <figcaption>Asia Population</figcaption></figure>
 </div>
-<section id="asia-cities-and-population-by-wikipedia.org" class="level2"><h2 class="anchored" data-anchor-id="asia-cities-and-population-by-wikipedia.org">Asia Cities and Population by Wikipedia.org</h2>
+</section><section id="asia-cities-and-population-by-wikipedia.org" class="level2"><h2 class="anchored" data-anchor-id="asia-cities-and-population-by-wikipedia.org">Asia Cities and Population by Wikipedia.org</h2>
 <p>Let’s scrap the table of the Major Cities in Asia along with the Population level from <code>Wikipedia.org</code>.</p>
 <p>Load the first set of libraries:</p>
 <div class="cell">
@@ -15577,7 +15577,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 </ul>
 
 
-</section></section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+</section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <guid>https://federicagazzelloni.com/content/blog/posts/dataviz/posts/ggmap/</guid>
   <pubDate>Mon, 06 Nov 2023 23:00:00 GMT</pubDate>
 </item>

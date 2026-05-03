@@ -26,5 +26,10 @@ Here, I share my thoughts on a variety of topics, including:
 - **Data Analytics**: Discussions on methodologies, best practices, and emerging trends in data analysis
 - **Actuarial Science**: Exploring the intersection of mathematics, statistics, and finance to assess and manage risk effectively
 
-Whether you're just starting out or have years of experience, I hope you'll discover content that inspires, informs, and supports your growth!
+## Start with these topic paths
 
+- [Statistics tutorials in R](posts/stats/) for modelling, prediction, Bayesian statistics, neural networks, and applied statistical workflows.
+- [Data visualization projects](posts/dataviz/) for R-based visual storytelling with public health, maps, networks, and TidyTuesday datasets.
+- [Actuarial science notes](posts/actuarial/) for risk, career pathways, and actuarial modelling context.
+
+Whether you're just starting out or have years of experience, I hope you'll discover content that inspires, informs, and supports your growth!

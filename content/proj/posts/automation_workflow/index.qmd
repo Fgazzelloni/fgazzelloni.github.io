@@ -14,13 +14,13 @@ page-navigation: true
 back-to-top-navigation: true
 ---
 
-# Welcome to the Automation Workflow Section
+## Welcome to the Automation Workflow Section
 
 Automation workflows are essential for improving efficiency and reducing manual effort in various tasks. In this section, you'll find resources, guides, and examples to help you set up and optimize automation workflows.
 
 ## What You'll Find Here
 
-- **n8n Setup**: Learn how to configure and use n8n for automating tasks.
+- **n8n Setup**: Learn how to configure and use n8n for automating tasks in [Building Your First Automation Assistant for Free with n8n and Oracle Cloud](posts/n8n_setup/).
 - **Tool Comparisons**: Explore comparisons of popular automation tools.
 - **Case Studies**: Real-world examples of automation workflows in action.
 - **Best Practices**: Tips and tricks for creating effective workflows.

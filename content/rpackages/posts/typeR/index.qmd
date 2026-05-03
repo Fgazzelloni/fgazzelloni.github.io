@@ -19,7 +19,7 @@ execute:
 
 #### Updated January 2026
 
-# Overview
+## Overview
 
 ::::: columns
 ::: {.column width="80%"}
@@ -123,5 +123,4 @@ If you try `{typeR}` and it fits your teaching or demo workflow, I’d love to h
 - which platform/IDE you were using (RStudio, Positron, terminal, etc.)
 
 If you want to contribute, open an issue with a short reproducible example and the expected behaviour.
-
 

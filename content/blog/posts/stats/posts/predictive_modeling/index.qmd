@@ -59,7 +59,7 @@ The most important functions for this package, grouped by steps to modeling, are
 
 ------------------------------------------------------------------------
 
-# TidyModels meta package
+## TidyModels meta package
 
 This ["meta package"](https://tidymodels.tidymodels.org/) is made of a set of packages for modeling, with the support of other well known packages for data manipulation and visualization such as broom, dplyr, ggplot2, purrr, infer, modeldata, and tibble; it includes:
 

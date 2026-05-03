@@ -42,9 +42,9 @@ This dedicated section provides a more coherent view of my work as an R develope
 
 The tab currently features packages covering different aspects of data analysis and development, for example:
 
--   `{oregonfrogs}`: A package for analyzing and visualizing Oregon frog population data.
--   `{hmsidwR}`: Tools for health metrics data collection as long as extra tools for unzipping data and for spatial interpolation using inverse distance weighting.
--   `{typeR}`: A package providing utilities for working with type-safe data structures in R providing live coding simulations.
+-   [`{oregonfrogs}`](posts/oregonfrogs/): A package for analyzing and visualizing Oregon frog population data.
+-   [`{hmsidwR}`](posts/hmsidwR/): Tools for health metrics data collection as long as extra tools for unzipping data and for spatial interpolation using inverse distance weighting.
+-   [`{typeR}`](posts/typeR/): A package providing utilities for working with type-safe data structures in R providing live coding simulations.
 
 Additional packages and updates will appear as projects mature or are made public.
 

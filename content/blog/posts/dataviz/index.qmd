@@ -23,4 +23,10 @@ Here you’ll find a collection of my favorite Data Visualizations, showcasing a
 
 For a more comprehensive experience, feel free to explore my full collection of plots and data visualizations at my `UPDVwR` website: [Explore all Data Visualizations](https://fgazzelloni.github.io/UPDVwR/)
 
-## 
+## Featured data visualization examples
+
+- [Malaria data analysis in R](posts/usecases/malaria/) for public health data, WHO malaria map data, and epidemic context.
+- [Oregon spotted frog data visualization](posts/oregonfrogs/) for ecological survey data, spatial context, and model output.
+- [Retail sales streamgraph with ggstream](posts/ggstream/) for TidyTuesday retail data and streamgraph design.
+- [European flights data visualization](posts/european_flights/) for airports, flight activity, and Sankey-style thinking.
+- [Du Bois Challenge 2024 data visualization](posts/dubois2024/challenge01/) for recreating historical data portraits in R.

@@ -155,7 +155,7 @@ Keeping all figures generated directly from the code ensured:
 - Fully up-to-date plots on each render
 - Transparent modelling steps
 
-# Automating Rendering
+## Automating Rendering
 
 With dozens of chapters and hundreds of figures, manual rendering was not feasible. I automated it using one command:
 
@@ -241,4 +241,3 @@ Although this project is complete, my writing plans certainly are not. I will co
 For now, I invite you to explore the book, use the examples, and share your thoughts. Your insights will help me shape future work and teaching material.
 
 > *"Thank you for following this journey."*
-

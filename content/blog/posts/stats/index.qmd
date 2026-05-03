@@ -15,3 +15,11 @@ back-to-top-navigation: true
 ---
 
 This section collects statistics tutorials in R for modelling, prediction, and data analysis. Topics include linear regression, `geom_smooth()`, artificial neural networks, Bayesian statistics, multiple testing, Simpson's paradox, and applied statistical workflows.
+
+## Featured statistics tutorials
+
+- [How `geom_smooth()` makes linear model predictions](posts/linear_prediction/) compares `ggplot2`, `lm()`, and `predict()` using historical cholera data.
+- [Plain vanilla neural network from scratch in R](posts/plain_vanilla/) explains activation functions, weights, and backpropagation without hiding the mechanics.
+- [R-Ladies event text analysis](posts/rladies/) uses Meetup event data, tidy text methods, and word cloud visualization.
+- [Bayesian statistics model comparison](posts/bayesian_statistics/) compares Bayesian model packages, priors, likelihoods, and posterior inference.
+- [Predictive modelling in R](posts/predictive_modeling/) compares caret and tidymodels for preprocessing, resampling, training, and evaluation.
