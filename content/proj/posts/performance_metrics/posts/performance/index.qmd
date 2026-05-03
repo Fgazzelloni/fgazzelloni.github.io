@@ -1,5 +1,6 @@
 ---
 title: "Measuring Health Performance"
+description: "Health performance metrics project covering DALYs, YLLs, YLDs, population health status, and extreme-event measurement."
 excerpt: "Machine learning models"
 date: 2023-03-14
 draft: false

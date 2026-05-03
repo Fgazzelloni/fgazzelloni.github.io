@@ -1,5 +1,6 @@
 ---
 title: "European flights"
+description: "R data visualization of European flights and airports using TidyTuesday data, Sankey-style thinking, and data wrangling."
 excerpt: "TidyTuesday 2022 Week 28"
 date: '2022-07-12'
 draft: false

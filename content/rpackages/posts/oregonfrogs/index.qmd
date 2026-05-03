@@ -1,5 +1,6 @@
 ---
 title: 'Oregon spotted a frog: Rana Pretiosa'
+description: "R package and mlr3 workflow for Oregon spotted frog data, classification, regression, and machine learning practice."
 date: 2022-10-30
 excerpt: Machine Learning with mlr3
 images: 

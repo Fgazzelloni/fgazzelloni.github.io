@@ -1,5 +1,6 @@
 ---
 title: '#DuboisChallenge2024 Challenge 01'
+description: "Du Bois Challenge 2024 data visualization in R, comparing the original plate with a recreated chart workflow."
 excerpt: ""
 date: 2024-02-05
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "Blog"
 description: "A space for sharing fresh content, personal reflections, and valuable insights on topics spanning data visualization, data analytics, and beyond."
 listing:
   contents:
@@ -27,5 +27,4 @@ Here, I share my thoughts on a variety of topics, including:
 - **Actuarial Science**: Exploring the intersection of mathematics, statistics, and finance to assess and manage risk effectively
 
 Whether you're just starting out or have years of experience, I hope you'll discover content that inspires, informs, and supports your growth!
-
 

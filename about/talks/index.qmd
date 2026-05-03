@@ -1,3 +1,8 @@
+---
+title: "Talks"
+description: "Selected talks by Federica Gazzelloni on data science, Shiny, R programming, health metrics, and community learning."
+---
+
 ### ShinyConf2024 - Shiny4Good Talk
 
 **Date**: April 2024
@@ -7,6 +12,5 @@
 #beginner #Shiny4Good #shinyapp #showcase #rstats #datascience
 
 {{< video https://youtu.be/10wndNaUtpg >}}
-
 
 

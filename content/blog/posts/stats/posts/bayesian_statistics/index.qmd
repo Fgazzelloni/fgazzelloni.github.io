@@ -1,5 +1,6 @@
 ---
 title: "Bayesian Statistics model comparison"
+description: "Bayesian statistics tutorial in R comparing model packages, prior distributions, likelihoods, and posterior inference."
 date: '2023-03-22'
 image: featured.png
 slug: bayesian-statistics

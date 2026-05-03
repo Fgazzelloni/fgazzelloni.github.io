@@ -1,5 +1,6 @@
 ---
 title: "Epidemic transition metrics of HIV infections estimation"
+description: "Health metrics analysis of HIV infection indicators using R, UNAIDS data, spatial methods, and epidemic transition measures."
 subtitle: "Dataset: Global data on HIV epidemiology and response (aidsinfo.unaids.org)"
 excerpt: ""
 date: 2023-11-13

@@ -1,5 +1,6 @@
 ---
 title: "R-Ladies Events Stats"
+description: "Text analysis of R-Ladies Meetup event data in R, including chapter event collection and word cloud visualization."
 excerpt: "Statistics"
 date: 2024-03-12
 draft: false

@@ -1,5 +1,6 @@
 ---
 title: "Health Index"
+description: "Health index project using IHME Global Burden of Disease life expectancy data, R workflows, and population health indicators."
 excerpt: "Machine learning models"
 date: 2025-11-01
 images:
@@ -232,4 +233,3 @@ index_data2022 %>%
          .after=location_name) %>%
   filter(is.na(dimension_index3_geo))
 ```
-

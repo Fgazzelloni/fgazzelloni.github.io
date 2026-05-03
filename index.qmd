@@ -1,10 +1,12 @@
 ---
+description: "Federica Gazzelloni's data science hub for R, Python, health metrics, infectious disease analytics, data visualization, books, podcasts, and projects."
 listing:
   contents: content
   sort: "date desc"
   type: grid
   image-height: "200"
   max-items: 3
+  page-size: 3
   categories: false
   feed: true
 page-layout: article

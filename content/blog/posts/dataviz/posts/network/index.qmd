@@ -1,5 +1,6 @@
 ---
 title: "Network of game mechanics"
+description: "Network data visualization in R using board game mechanics data, igraph, ggraph, and TidyTuesday workflows."
 excerpt: "TidyTuesday 2022 Week 4"
 date: 2022-01-24
 draft: false

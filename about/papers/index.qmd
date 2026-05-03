@@ -1,3 +1,8 @@
+---
+title: "Papers"
+description: "Authored and co-authored publications by Federica Gazzelloni, including scholarly work in health metrics, data science, and statistics."
+---
+
 ### Authored & Co-authored Publications
 
 ```{r}

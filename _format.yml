@@ -4,6 +4,7 @@ format:
       - cosmo
       - custom.scss
     css: styles.css  
+    canonical-url: true
     toc: false
     smooth-scroll: true
     highlight-style: github

@@ -1,5 +1,6 @@
 ---
 title: "Bills of Mortality to AI"
+description: "Podcast episode connecting John Graunt's Bills of Mortality with modern health metrics, data science, and public health analytics."
 date: '2026-02-08'
 image: featured.png
 slug: podcast-bills-of-mortality-to-ai
@@ -28,5 +29,4 @@ execute:
 - Data-driven insights
 - Health metrics analysis
 - Innovative approaches to public health
-
 

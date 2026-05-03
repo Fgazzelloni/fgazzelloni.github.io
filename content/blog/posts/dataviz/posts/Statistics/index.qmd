@@ -1,5 +1,6 @@
 ---
 title: "Statistics"
+description: "R data visualization of wage distributions by education level using ggdist dotted distributions and the ISLR2 Wage dataset."
 excerpt: "#30DayChartChallenge 2022 #Day9 Statistics"
 date: 2022-04-09
 draft: false

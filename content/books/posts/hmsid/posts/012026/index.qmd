@@ -1,5 +1,6 @@
 ---
 title: "The Hidden Math That Shapes Our Health: 5 Surprising Truths from Data Science"
+description: "Health metrics article explaining DALYs, risk exposure, epidemic prediction, AI models, and spatial public health analysis."
 date: '2026-01-08'
 image: featured.png
 slug: inside-a-book-in-r

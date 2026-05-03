@@ -1,5 +1,6 @@
 ---
 title: "Multiple Hypothesis Testing"
+description: "Introduction to multiple hypothesis testing in R, covering research questions, predictors, and statistical decision workflows."
 excerpt: "summary of what is it and how to use it"
 image: featured.png
 date: 2022-05-20

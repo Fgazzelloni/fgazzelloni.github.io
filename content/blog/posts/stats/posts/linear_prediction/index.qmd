@@ -1,5 +1,6 @@
 ---
 title: "How does geom_smooth() make predictions"
+description: "R tutorial comparing linear model predictions from lm and predict with ggplot2 geom_smooth using historical cholera data."
 date: '2024-02-26'
 image: featured.png
 slug: model prediction

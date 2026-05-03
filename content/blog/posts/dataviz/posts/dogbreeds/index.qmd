@@ -1,5 +1,6 @@
 ---
 title: "Dog breeds"
+description: "R visualization walkthrough using TidyTuesday dog breed data, ggforce ellipses, and custom drawing techniques."
 excerpt: "TidyTuesday 2022 Week 5"
 date: 2022-02-05
 draft: false

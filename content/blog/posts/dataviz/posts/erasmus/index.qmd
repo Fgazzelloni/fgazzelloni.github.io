@@ -1,5 +1,6 @@
 ---
 title: "Erasmus students exchange"
+description: "R network visualization of Erasmus student exchange flows across European countries using TidyTuesday mobility data."
 excerpt: "TidyTuesday 2022 Week 10"
 date: 2022-03-15
 draft: false

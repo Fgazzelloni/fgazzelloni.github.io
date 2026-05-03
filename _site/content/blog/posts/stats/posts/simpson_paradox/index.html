@@ -5,6 +5,7 @@
 <meta name="generator" content="quarto-1.8.27">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="dcterms.date" content="2024-01-12">
+<meta name="description" content="Statistical explanation of Simpson’s Paradox using synthetic R data, confounding variables, and causal interpretation.">
 <title>Understanding Simpson’s Paradox: A Simple Explanation – Federica Gazzelloni</title>
 <style>
 code{white-space: pre-wrap;}
@@ -127,19 +128,20 @@ cookieconsent.run({
 </script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="stylesheet" href="../../../../../../styles.css">
 <meta property="og:title" content="Understanding Simpson’s Paradox: A Simple Explanation – Federica Gazzelloni">
-<meta property="og:description" content="Data Science Portfolio">
+<meta property="og:description" content="Statistical explanation of Simpson’s Paradox using synthetic R data, confounding variables, and causal interpretation.">
 <meta property="og:image" content="https://federicagazzelloni.com/content/blog/posts/stats/posts/simpson_paradox/featured.png">
 <meta property="og:site_name" content="Federica Gazzelloni">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="1200">
 <meta property="og:image:width" content="1800">
 <meta name="twitter:title" content="Understanding Simpson’s Paradox: A Simple Explanation – Federica Gazzelloni">
-<meta name="twitter:description" content="Data Science Portfolio">
+<meta name="twitter:description" content="Statistical explanation of Simpson’s Paradox using synthetic R data, confounding variables, and causal interpretation.">
 <meta name="twitter:image" content="https://federicagazzelloni.com/content/blog/posts/stats/posts/simpson_paradox/featured.png">
 <meta name="twitter:creator" content="@fgazzelloni">
 <meta name="twitter:image-height" content="1200">
 <meta name="twitter:image-width" content="1800">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://federicagazzelloni.com/content/blog/posts/stats/posts/simpson_paradox/">
 </head>
 <body class="nav-fixed fullcontent quarto-light">
 
@@ -165,7 +167,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">
 <li>
     <a class="dropdown-item" href="../../../../../../content/blog/index.html">
- <span class="dropdown-text">Overview</span></a>
+ <span class="dropdown-text">Blog</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/blog/posts/dataviz/index.html">
@@ -188,7 +190,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-packages">
 <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/index.html">
- <span class="dropdown-text">Overview</span></a>
+ <span class="dropdown-text">R Packages</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/posts/oregonfrogs/index.html">
@@ -279,6 +281,11 @@ cookieconsent.run({
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Statistical explanation of Simpson’s Paradox using synthetic R data, confounding variables, and causal interpretation.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -806,7 +813,7 @@ cookieconsent.run({
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright © 2026 Federica Gazzelloni<br>Designer &amp; Maintainer: <a href="https://federicagazzelloni.com">Federica Gazzelloni</a><br>Powered by: <a href="https://datametricus.github.io">DataMetricus</a> | <a href="../../../../../../LICENSE.html">MIT License</a>.</p>
+<p>Copyright © 2026 Federica Gazzelloni<br>Designer &amp; Maintainer: <a href="https://federicagazzelloni.com">Federica Gazzelloni</a><br>Powered by: <a href="https://datametricus.github.io">DataMetricus</a> | <a href="../../../../../../LICENSE.md">MIT License</a>.</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">

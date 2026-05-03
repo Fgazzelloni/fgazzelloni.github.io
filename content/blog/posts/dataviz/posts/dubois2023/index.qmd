@@ -1,5 +1,6 @@
 ---
 title: "DuBois Challenge 2022"
+description: "R data visualization post recreating a Du Bois Challenge plate with TidyTuesday data and ggplot-based design."
 excerpt: "TidyTuesday 2022 Week 7"
 date: 2022-02-21
 draft: false

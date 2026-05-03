@@ -5,6 +5,7 @@
 <meta name="generator" content="quarto-1.8.27">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="dcterms.date" content="2022-06-05">
+<meta name="description" content="Predictive modeling comparison in R using caret and tidymodels for preprocessing, resampling, training, and model evaluation.">
 <title>Predictive modeling – Federica Gazzelloni</title>
 <style>
 code{white-space: pre-wrap;}
@@ -127,19 +128,20 @@ cookieconsent.run({
 </script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="stylesheet" href="../../../../../../styles.css">
 <meta property="og:title" content="Predictive modeling – Federica Gazzelloni">
-<meta property="og:description" content="Data Science Portfolio">
+<meta property="og:description" content="Predictive modeling comparison in R using caret and tidymodels for preprocessing, resampling, training, and model evaluation.">
 <meta property="og:image" content="https://federicagazzelloni.com/content/blog/posts/stats/posts/predictive_modeling/featured.png">
 <meta property="og:site_name" content="Federica Gazzelloni">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="786">
 <meta property="og:image:width" content="1270">
 <meta name="twitter:title" content="Predictive modeling – Federica Gazzelloni">
-<meta name="twitter:description" content="Data Science Portfolio">
+<meta name="twitter:description" content="Predictive modeling comparison in R using caret and tidymodels for preprocessing, resampling, training, and model evaluation.">
 <meta name="twitter:image" content="https://federicagazzelloni.com/content/blog/posts/stats/posts/predictive_modeling/featured.png">
 <meta name="twitter:creator" content="@fgazzelloni">
 <meta name="twitter:image-height" content="786">
 <meta name="twitter:image-width" content="1270">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://federicagazzelloni.com/content/blog/posts/stats/posts/predictive_modeling/">
 </head>
 <body class="nav-fixed fullcontent quarto-light">
 
@@ -165,7 +167,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blog">
 <li>
     <a class="dropdown-item" href="../../../../../../content/blog/index.html">
- <span class="dropdown-text">Overview</span></a>
+ <span class="dropdown-text">Blog</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/blog/posts/dataviz/index.html">
@@ -188,7 +190,7 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-r-packages">
 <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/index.html">
- <span class="dropdown-text">Overview</span></a>
+ <span class="dropdown-text">R Packages</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../../../../content/rpackages/posts/oregonfrogs/index.html">
@@ -278,6 +280,11 @@ cookieconsent.run({
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Predictive modeling comparison in R using caret and tidymodels for preprocessing, resampling, training, and model evaluation.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -457,13 +464,8 @@ Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
-Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: glm.fit: algorithm did not converge</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
@@ -482,7 +484,7 @@ Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># modelFit</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># modelFit</span></span>
 <span></span>
 <span><span class="va">predictions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">modelFit</span>,newdata<span class="op">=</span><span class="va">testing</span><span class="op">)</span></span>
 <span><span class="co"># predictions</span></span>
@@ -494,31 +496,31 @@ Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
 
           Reference
 Prediction nonspam spam
-   nonspam     655   37
-   spam         42  416
-                                          
-               Accuracy : 0.9313          
-                 95% CI : (0.9151, 0.9452)
-    No Information Rate : 0.6061          
-    P-Value [Acc &gt; NIR] : &lt;2e-16          
-                                          
-                  Kappa : 0.8564          
-                                          
- Mcnemar's Test P-Value : 0.6527          
-                                          
-            Sensitivity : 0.9397          
-            Specificity : 0.9183          
-         Pos Pred Value : 0.9465          
-         Neg Pred Value : 0.9083          
-             Prevalence : 0.6061          
-         Detection Rate : 0.5696          
-   Detection Prevalence : 0.6017          
-      Balanced Accuracy : 0.9290          
-                                          
-       'Positive' Class : nonspam         
-                                          </code></pre>
+   nonspam     661   51
+   spam         36  402
+                                         
+               Accuracy : 0.9243         
+                 95% CI : (0.9075, 0.939)
+    No Information Rate : 0.6061         
+    P-Value [Acc &gt; NIR] : &lt;2e-16         
+                                         
+                  Kappa : 0.8406         
+                                         
+ Mcnemar's Test P-Value : 0.1334         
+                                         
+            Sensitivity : 0.9484         
+            Specificity : 0.8874         
+         Pos Pred Value : 0.9284         
+         Neg Pred Value : 0.9178         
+             Prevalence : 0.6061         
+         Detection Rate : 0.5748         
+   Detection Prevalence : 0.6191         
+      Balanced Accuracy : 0.9179         
+                                         
+       'Positive' Class : nonspam        
+                                         </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">cm</span><span class="op">$</span><span class="va">table</span>,main<span class="op">=</span><span class="st">"Table"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">cm</span><span class="op">$</span><span class="va">table</span>,main<span class="op">=</span><span class="st">"Table"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
@@ -528,7 +530,7 @@ Prediction nonspam spam
 </div>
 </section><section id="tidymodels-example-with-spam-data" class="level2"><h2 class="anchored" data-anchor-id="tidymodels-example-with-spam-data">TidyModels Example with SPAM Data</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching packages ────────────────────────────────────── tidymodels 1.4.1 ──</code></pre>
 </div>
@@ -539,7 +541,7 @@ Prediction nonspam spam
 ✔ infer        1.0.9      ✔ tune         2.0.1 
 ✔ modeldata    1.5.1      ✔ workflows    1.3.0 
 ✔ parsnip      1.3.3      ✔ workflowsets 1.1.1 
-✔ purrr        1.2.0      ✔ yardstick    1.3.2 
+✔ purrr        1.2.1      ✔ yardstick    1.3.2 
 ✔ recipes      1.3.1      </code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
@@ -558,7 +560,7 @@ Prediction nonspam spam
 ✖ yardstick::specificity() masks caret::specificity()
 ✖ recipes::step()          masks stats::step()</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://tidymodels.tidymodels.org/reference/tidymodels_prefer.html">tidymodels_prefer</a></span><span class="op">(</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://tidymodels.tidymodels.org/reference/tidymodels_prefer.html">tidymodels_prefer</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
 <span><span class="va">split</span> <span class="op">&lt;-</span> <span class="fu">initial_split</span><span class="op">(</span><span class="va">spam</span>,<span class="fl">0.75</span>,strata<span class="op">=</span><span class="va">type</span><span class="op">)</span></span>
 <span><span class="va">training</span> <span class="op">&lt;-</span> <span class="fu">training</span><span class="op">(</span><span class="va">split</span><span class="op">)</span></span>
@@ -570,7 +572,7 @@ Prediction nonspam spam
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tidy(modelFit)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tidy(modelFit)</span></span>
 <span></span>
 <span><span class="va">predictions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">modelFit</span>,new_data<span class="op">=</span><span class="va">testing</span><span class="op">)</span></span>
 <span><span class="co"># predictions</span></span>
@@ -584,7 +586,7 @@ Prediction nonspam spam
    nonspam     668   50
    spam         29  404</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html">autoplot</a></span><span class="op">(</span><span class="va">cm</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html">autoplot</a></span><span class="op">(</span><span class="va">cm</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
@@ -1002,7 +1004,7 @@ Prediction nonspam spam
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright © 2026 Federica Gazzelloni<br>Designer &amp; Maintainer: <a href="https://federicagazzelloni.com">Federica Gazzelloni</a><br>Powered by: <a href="https://datametricus.github.io">DataMetricus</a> | <a href="../../../../../../LICENSE.html">MIT License</a>.</p>
+<p>Copyright © 2026 Federica Gazzelloni<br>Designer &amp; Maintainer: <a href="https://federicagazzelloni.com">Federica Gazzelloni</a><br>Powered by: <a href="https://datametricus.github.io">DataMetricus</a> | <a href="../../../../../../LICENSE.md">MIT License</a>.</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">

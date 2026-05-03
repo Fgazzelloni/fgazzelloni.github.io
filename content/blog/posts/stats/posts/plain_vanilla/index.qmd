@@ -1,5 +1,6 @@
 ---
 title: "Understanding Plain Vanilla - from Scratch"
+description: "Artificial neural network tutorial in R explaining a plain vanilla model, activation functions, weights, and backpropagation."
 date: '2024-06-28'
 summary: "This is a simple introduction to Artificial Neural Networks (ANN) from scratch using R outside the library boxes | used in Ch10 ISLR Book-Club."
 image: featured.png

@@ -1,5 +1,6 @@
 ---
 title: "hmsidwR R-package"
+description: "R package for datasets and tools supporting health metrics, infectious disease modelling, machine learning, and spatial interpolation."
 subtitle: "Health Metrics and the Spread of Infectious Diseases: Machine Learning Application and Spatial Modelling Analysis with R"
 excerpt: "Machine learning models"
 date: 2024-04-14

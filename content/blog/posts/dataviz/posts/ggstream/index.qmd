@@ -1,5 +1,6 @@
 ---
 title: "Retail Sales with ggstream"
+description: "R visualization of monthly state retail sales using ggstream, TidyTuesday data, and tidyverse workflows."
 excerpt: "TidyTuesday 2022 Week 50"
 date: 2023-01-31
 draft: false

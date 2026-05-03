@@ -1,3 +1,8 @@
+---
+title: "Profile"
+description: "Professional profile of Federica Gazzelloni, statistician, actuary, data scientist, instructor, and R community organizer."
+---
+
 ### STATISTICIAN | ACTUARY | DATA SCIENTIST
 
 
@@ -20,4 +25,3 @@ In addition to her work with R-Ladies Rome, Federica has collaborated with other
 One of Federica’s key strengths is her ability to use data visualization as a tool for communication and insight. Her background in data visualization allows her to create compelling visual representations of complex health data, making it easier for diverse audiences to grasp intricate statistical relationships. Whether through static graphs or interactive dashboards, Federica’s visualizations aim to tell a story, uncover trends, and empower decision-makers with actionable insights.
 
 Throughout her career, Federica has consistently demonstrated a commitment to knowledge sharing and community building. Her work is informed by a belief in the power of data to drive positive change, especially in fields like public health where informed decision-making can save lives. Her contributions to education, open-source software, and health metrics research underscore her dedication to making data science an inclusive and impactful field.
-

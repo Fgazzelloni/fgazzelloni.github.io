@@ -1,3 +1,8 @@
+---
+title: "Workshops"
+description: "Selected workshops taught by Federica Gazzelloni for organizations including the CDC, University of Washington, and Helmholtz."
+---
+
 ### CDC Centers for Disease Control
 
 **Data Analysis and Visualization with R**

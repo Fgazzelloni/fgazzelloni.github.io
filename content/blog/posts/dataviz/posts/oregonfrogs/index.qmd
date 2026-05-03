@@ -1,5 +1,6 @@
 ---
 title: "Oregon Spotted a frog: Rana Pretiosa"
+description: "R data visualization using TidyTuesday Oregon spotted frog data, custom plots, and related package workflows."
 excerpt: "TidyTuesday 2022 Week 31"
 date: '2022-08-02'
 draft: false

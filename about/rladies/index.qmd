@@ -1,3 +1,8 @@
+---
+title: "R-Ladies"
+description: "R-Ladies community talks, tutorials, and events involving Federica Gazzelloni and R-Ladies chapters around the world."
+---
+
 ###
 
 > Sharing the mission with the open source community

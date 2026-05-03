@@ -1,3 +1,8 @@
+---
+title: "Health Metrics Book"
+description: "Overview of Health Metrics and the Spread of Infectious Diseases, Federica Gazzelloni's book on machine learning applications and spatial modelling analysis with R."
+---
+
 ### Health Metrics and the Spread of Infectious Diseases: Machine Learning Applications and Spatial Modelling Analysis with R
 
 Discover the fascinating world of health metrics and infectious disease analysis with our manual! 
@@ -22,7 +27,7 @@ Reserve your paperback copy:
 
 ::: {.column width="40%"}
 
-![Editor CRC Press - Chapman & Hall](images/book_cover.png){width="50%" height="auto"}
+![Editor CRC Press - Chapman & Hall](/images/book_cover.png){width="50%" height="auto"}
 :::
 ::::
 

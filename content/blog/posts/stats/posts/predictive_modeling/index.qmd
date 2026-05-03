@@ -1,5 +1,6 @@
 ---
 title: "Predictive modeling"
+description: "Predictive modeling comparison in R using caret and tidymodels for preprocessing, resampling, training, and model evaluation."
 excerpt: "TidyModels vs Caret"
 image: featured.png
 date: 2022-06-05

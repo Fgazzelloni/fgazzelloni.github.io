@@ -1,6 +1,12 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "*.qmd"
+    - "about/**/*.qmd"
+    - "content/**/*.qmd"
+  post-render:
+    - scripts/normalize-sitemap.R
 
 metadata-files:
   - _website.yml

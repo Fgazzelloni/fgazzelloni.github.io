@@ -1,5 +1,6 @@
 ---
 title: "The New Science of Fighting Infectious Disease"
+description: "Podcast episode on infectious disease analytics using health metrics, machine learning, spatial modelling, and One Health thinking."
 date: '2026-01-08'
 image: featured.png
 slug: podcast-the-new-science-of-fighting-infectious-disease
@@ -30,5 +31,4 @@ execute:
 - Data-driven insights
 - Health metrics analysis
 - Innovative approaches to public health
-
 

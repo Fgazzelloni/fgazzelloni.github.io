@@ -1,5 +1,6 @@
 ---
 title: "How to get started with ggmap"
+description: "R mapping tutorial using ggmap, geocoding, and population data for major Asian cities and regions."
 subtitle: "Dataset: Asia Population Estimation"
 excerpt: ""
 date: 2023-11-07

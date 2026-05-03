@@ -1,5 +1,6 @@
 ---
 title: "Writing a book in R"
+description: "Behind-the-scenes workflow for writing a technical health metrics book in R with Quarto, reproducible code, and package data."
 date: '2025-06-23'
 image: featured.png
 slug: writing-a-book-in-r
@@ -240,5 +241,4 @@ Although this project is complete, my writing plans certainly are not. I will co
 For now, I invite you to explore the book, use the examples, and share your thoughts. Your insights will help me shape future work and teaching material.
 
 > *"Thank you for following this journey."*
-
 

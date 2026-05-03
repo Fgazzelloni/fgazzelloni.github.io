@@ -1,5 +1,6 @@
 ---
 title: "The Accounting of Human Suffering"
+description: "Podcast episode explaining DALYs, YLLs, YLDs, disability weights, and how health metrics quantify disease burden."
 date: '2026-02-26'
 image: featured.png
 slug: podcast-the-accounting-of-human-suffering
@@ -28,5 +29,4 @@ execute:
 
 - <strong>Years of Life Lost (YLLs)</strong> are calculated by comparing the age at death to a <strong>standard life expectancy</strong> to measure the impact of premature death
 - prevalence</strong> data
-
 

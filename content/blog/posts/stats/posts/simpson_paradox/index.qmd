@@ -1,5 +1,6 @@
 ---
 title: "Understanding Simpson's Paradox: A Simple Explanation"
+description: "Statistical explanation of Simpson's Paradox using synthetic R data, confounding variables, and causal interpretation."
 date: '2024-01-12'
 image: featured.png
 slug: bayesian-statistics
